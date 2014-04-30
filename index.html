@@ -1,0 +1,879 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Cheeky Hen! Your ultimate hen party in Brighton</title> 
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" />
+  <link rel="stylesheet" href="css/styling.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/functions.js"></script>
+</head> 
+<body> 
+<audio id="backingMusic" autoplay loop preload>
+  <source src="media/music.mp3">
+  <source src="media/music.ogg">
+</audio>
+<div data-role="page" id="home">
+
+  <div data-role="header" data-position="fixed">
+    <h1>Cheeky Hen</h1>
+  </div><!-- /header -->
+
+  <div data-role="content"> 
+    
+    <div class="ui-body">
+    <div class="section group">
+	<div class="col span_8_of_8">
+    <img src="images/icon.jpg" class="center" alt="Cheeky Hen">
+    </div>
+    </div>
+    <div class="section group">
+	<div class="col span_3_of_8">
+      <h1 class="text-center">Cheeky Hen!</h1>
+      </div>
+      <div class="col span_5_of_8">
+      <p class="text-center">Introducing <b>the</b> Hen Party app to plan your ultimate hen party in the sunny city of Brighton and Hove!<br />Navigating through this app you'll find activities perfect for any party size, the perfect venues for those 'quiet' drinks with your chums, and the all important guide to accommodation - finding you the very best place to lay your weary heads when the partying is done.</p>
+      </div>
+      </div>
+      <hr>
+      <div class="section group">
+	<div class="col span_3_of_8">
+    </div><div class="col span_2_of_8">
+      <h3 class="blocktext">Check out our top packages</h3></div>
+      <div class="col span_3_of_8"></div>
+      <div class="col span_8_of_8">
+      <p>Small carousel of three pre-conceived packages</p>
+      </div>
+      </div>
+    </div><!-- /themed container -->
+
+  </div><!-- /content -->
+
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="gear" class="ui-btn-active ui-state-persist">Home</a></li>
+        <li><a href="#activities" data-icon="refresh">Activities</a></li>
+        <li><a href="#venues" data-icon="check">Venues</a></li>
+        <li><a href="#accomodation" data-icon="check">Accommodation</a></li>
+        <li><a href="#options" data-icon="check">Options</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<div data-role="page" id="activities">
+<div data-role="header" data-position="fixed">
+    <a href="javascript:history.back()" data-role="button">Back</a>
+    <h1>Cheeky Hen - Activities</h1>
+  </div><!-- /header -->
+
+  <div data-role="content"> 
+  <div class="section group">
+  <div class="col span_8_of_8">
+  <p>There’s so much pressure to make the bride-to-be's hen weekend the most memorable in history: the activities form the basis of your <em>Cheeky Hen</em> party so it’s important you get it right. From dance lessons to perfume workshops to filming your own pop video - activities in Brighton are endless. Add a little something extra to your weekend to make it perfect.</p>
+  <hr>
+  </div>
+  </div>
+  
+  <div class="section group">
+	<div class="col span_3_of_9">
+    	<p>Why not check out some <a href="#life_drawing">Life Drawing</a> on your trip?</p>
+    </div>
+    
+    <div class="col span_3_of_9">
+    <p>Are you brave enough for a half day of <a href="#paintball">Paintballing</a>?</p>
+    </div>
+    
+    <div class="col span_3_of_9">
+    	<p>Do you dare to bare all and <a href="#pimpyourpants">Pimp out your pants</a> in our workshop?</p>
+    </div>
+   </div>
+   <div class="section group">
+    <div class="col span_4_of_8">
+    	<p>Quench your third with our <a href="#cavatasting">Cava Tasting</a> activity</p>
+    </div>
+    
+    <div class="col span_4_of_8">
+    	<p>Feeling overworked? Why not get some <a href="#pampering">Pampering</a> courtesy of our experts</p>
+    </div>
+   </div>
+   <div class="section group">
+    <div class="col span_3_of_9">
+    	<p>So you think you can sing? Our <a href="#mammamia">Mamma Mia</a> activity will test this one out!</p>
+    </div>
+    
+    <div class="col span_3_of_9">
+    	<p>Wanna be a popstar? Now you can <a href="#popvideo">star in your own pop video</a> courtesy of our friends at Pop Video</p>
+    </div>
+    
+    <div class="col span_3_of_9">
+    	<p>Fancy yourself as a bit of a mover? Try out our <a href="#bellydancing">Belly Dancing</a> lessons</p>
+    </div>
+   </div>
+   <div class="section group">
+    <div class="col span_8_of_8">
+    	<p>Everyone loves being waited on... especially when you have your very own hunky <a href="#butlers">Bare Bum Butlers</a> waiting on your every need</p>
+    </div>
+  </div>
+
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="gear">Home</a></li>
+        <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist">Activities</a></li>
+        <li><a href="#venues" data-icon="check">Venues</a></li>
+        <li><a href="#accomodation" data-icon="check">Accommodation</a></li>
+        <li><a href="#options" data-icon="check">Options</a></li>
+      </ul>
+    </div>
+  </div>
+</div> <!-- Content -->
+</div><!-- Page -->
+
+
+<!-- Pages for linked activities -->
+	
+<div data-role="page" id="life_drawing">
+  <div data-role="header" data-position="fixed">
+    <a href="javascript:history.back()" data-role="button">Back</a>
+    <h1>Cheeky Hen - Life Drawing</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+  <div class="section group">
+    <div class="col span_8_of_8"><!-- Full grid of product -->
+       <div class="grid-view product">
+         <div class="col span_3_of_8"> <!-- activity image -->
+            <img src="images/act/act-001.jpg" alt="Life Drawing" class="center" style="padding-top:10%;">
+         </div> <!-- End of activity image -->
+       
+       <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
+        	<div class="product-info">
+               <h3>Life Drawing with a Top Male Model</h3>
+               <span class="price">From $281.00</span>
+			   <div class="rating-box">
+				 <span>3 Review(s)</span>
+			    </div>
+             </div>
+       <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
+          <p>Appreciate art?! How about a life drawing class with your very own most handsome and gorgeous Brighton male model? For 60 mins you and your friends can draw still life portraits of one of Brighton’s very best male models and then have your photos taken with him so you can always remember the fun! The activity will take place in your Brighton house and they can provide the drawing materials for an extra £5 each or you can bring your own. <br />Not to be missed.</p><br />
+       </div> <!-- end of description 3 pt -->
+       <div class="col span_2_of_8"> <!-- 2 pt for key points -->
+            <ul><li>Only Brighton’s very best male models</li>
+            <li>Activity takes place in your accommodation</li>
+            <li>Length: 90 minutes</li>
+            <li>Materials supplied for extra £5 each or bring your own</li></ul>
+            <br />
+        </div> <!-- end of 2 pt split for key points -->
+
+		<!-- The bottom buttons -->
+        <div class="product-actions full-width">
+          <span class="add-to-cart">
+          <span class="action-wrapper">
+          <span class="action-name">Add to my party</span>
+          </span></span>
+                        
+          <span class="add-to-favorites">
+          <span class="action-wrapper">
+          <span class="action-name">Add to wishlist</span>
+          </span></span>
+         </div>
+       </div> <!-- closes 5 pt description box -->
+   	</div> <!-- closes full 8 pt span -->
+   </div> <!-- end of section group -->
+  </div> <!-- End of content -->
+
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="gear">Home</a></li>
+        <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist">Activities</a></li>
+        <li><a href="#venues" data-icon="check">Venues</a></li>
+        <li><a href="#accomodation" data-icon="check">Accommodation</a></li>
+        <li><a href="#options" data-icon="check">Options</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div><!-- Page -->
+
+
+<!-- ACTIVITY 2 -->
+
+<div data-role="page" id="paintball">
+  <div data-role="header" data-position="fixed">
+    <a href="javascript:history.back()" data-role="button">Back</a>
+    <h1>Cheeky Hen - Paintball</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+  <div class="section group">
+    <div class="col span_8_of_8"><!-- Full grid of product -->
+       <div class="grid-view product">
+         <div class="col span_3_of_8"> <!-- activity image -->
+            <img src="images/act/act-002.jpg" alt="Paintball" class="center" style="padding-top:10%;">
+         </div> <!-- End of activity image -->
+       
+       <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
+        	<div class="product-info">
+               <h3>Half a Day's Paintball</h3>
+               <span class="price">From £30.00</span>
+			   <div class="rating-box">
+				 <span>3 Review(s)</span>
+			    </div>
+             </div>
+       <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
+          <p>If you can’t romp around like a mad woman on a 50-acre site of woodland then when the hell can you?! This will get the adrenaline pumping as well as the competition. Nice girls don’t exist in the paintballing arena – in fact they come last so make sure you’re ready to do battle..</p><br />
+       </div> <!-- end of description 3 pt -->
+       <div class="col span_2_of_8"> <!-- 2 pt for key points -->
+            <ul><li>Morning session</li>
+            <li>Minimum number in winter is 10</li>
+            <li>Minimum number in summer is 5</li>
+            <li>Please ask about upgrading to a full day with a lunch</li>
+            <li>100 paintballs included</li>
+            <li>Equipment and safety briefing included</li></ul>
+            <br />
+        </div> <!-- end of 2 pt split for key points -->
+
+		<!-- The bottom buttons -->
+        <div class="product-actions full-width">
+          <span class="add-to-cart">
+          <span class="action-wrapper">
+          <span class="action-name">Add to my party</span>
+          </span></span>
+                        
+          <span class="add-to-favorites">
+          <span class="action-wrapper">
+          <span class="action-name">Add to wishlist</span>
+          </span></span>
+         </div>
+       </div> <!-- closes 5 pt description box -->
+   	</div> <!-- closes full 8 pt span -->
+   </div> <!-- end of section group -->
+  </div> <!-- End of content -->
+
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="gear">Home</a></li>
+        <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist">Activities</a></li>
+        <li><a href="#venues" data-icon="check">Venues</a></li>
+        <li><a href="#accomodation" data-icon="check">Accommodation</a></li>
+        <li><a href="#options" data-icon="check">Options</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div><!-- end of page -->
+
+
+<!-- ACTIVITY 3 -->
+
+
+
+<div data-role="page" id="pimpyourpants">
+  <div data-role="header" data-position="fixed">
+    <a href="javascript:history.back()" data-role="button">Back</a>
+    <h1>Cheeky Hen - Pimp Your Pants!</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+  <div class="section group">
+    <div class="col span_8_of_8"><!-- Full grid of product -->
+       <div class="grid-view product">
+         <div class="col span_3_of_8"> <!-- activity image -->
+            <img src="images/act/act-003.jpg" alt="Pimp Your Pants" class="center" style="padding-top:10%;">
+         </div> <!-- End of activity image -->
+       
+       <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
+        	<div class="product-info">
+               <h3>Pimp Your Pants!</h3>
+               <span class="price">From £21.00</span>
+			   <div class="rating-box">
+				 <span>3 Review(s)</span>
+			    </div>
+             </div>
+       <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
+          <p>Pimp your pants and customise your knickers with this very popular creative workshop. The workshop takes place in your accommodation so you can have a pyjama party at the same time! They provide a range of materials including ribbons, bows, iron-on applique, sequins, lace, fabric pens…. they show you the techniques and there you have it, fabulously pimped pants! Great fun for all ages in your group. Just remember not to get your knickers in a twist! If you don’t fancy pant pimping there are other workshops available; vintage bunting, garter making, corsage making, jewellery making…just ask!</p><br />
+       </div> <!-- end of description 3 pt -->
+       <div class="col span_2_of_8"> <!-- 2 pt for key points -->
+            <ul><li>Length; 3 hours</li>
+            <li>Please bring your own (new) knickers</li>
+            <li>All other materials are provided</li>
+            <li>Minimum 8 people, no maximum</li></ul>
+            <br />
+        </div> <!-- end of 2 pt split for key points -->
+
+		<!-- The bottom buttons -->
+        <div class="product-actions full-width">
+          <span class="add-to-cart">
+          <span class="action-wrapper">
+          <span class="action-name">Add to my party</span>
+          </span></span>
+                        
+          <span class="add-to-favorites">
+          <span class="action-wrapper">
+          <span class="action-name">Add to wishlist</span>
+          </span></span>
+         </div>
+       </div> <!-- closes 5 pt description box -->
+   	</div> <!-- closes full 8 pt span -->
+   </div> <!-- end of section group -->
+  </div> <!-- End of content -->
+
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="gear">Home</a></li>
+        <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist">Activities</a></li>
+        <li><a href="#venues" data-icon="check">Venues</a></li>
+        <li><a href="#accomodation" data-icon="check">Accommodation</a></li>
+        <li><a href="#options" data-icon="check">Options</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div><!-- end of page -->
+
+
+<!-- ACTIVITY 4 -->
+
+
+
+
+<div data-role="page" id="cavatasting">
+  <div data-role="header" data-position="fixed">
+    <a href="javascript:history.back()" data-role="button">Back</a>
+    <h1>Cheeky Hen - Cava Tasting</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+  <div class="section group">
+    <div class="col span_8_of_8"><!-- Full grid of product -->
+       <div class="grid-view product">
+         <div class="col span_3_of_8"> <!-- activity image -->
+            <img src="images/act/act-004.jpg" alt="Cava Tasting" class="center" style="padding-top:10%;">
+         </div> <!-- End of activity image -->
+       
+       <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
+        	<div class="product-info">
+               <h3>Cava Tasting</h3>
+               <span class="price">From £17.00</span>
+			   <div class="rating-box">
+				 <span>3 Review(s)</span>
+			    </div>
+             </div>
+       <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
+          <p>Cava is officially the coolest fizz on the block! And what better place to learn about this Spanish sparkler and try a selection of Cavas than at the UK’s first dedicated Cava bar in Brighton.<br />Let the bar staff guide you through different styles of Cava while you learn about how Cava is made, what makes it unique, and the difference between Cava and other Sparkling Wines (Champagne, Prosecco etc).<br />You will learn how to taste Cava and have some fun with a blind tasting. Vote for your favourite to receive a discount.<br />And put your new-found knowledge to the test for the chance to win a Cava cocktail.</p><br />
+       </div> <!-- end of description 3 pt -->
+       <div class="col span_2_of_8"> <!-- 2 pt for key points -->
+            <h4>Sample a selection of 6 different Cavas from our extensive range:</h4>
+            <ul><li>Codorníu Brut NV</li>
+            <li>Codorníu Rose Brut NV</li>
+            <li>Codorníu Semi-Seco NV</li>
+            <li>Anna de Codorníu Brut NV* Anna de Codorníu Blanc de Noirs Brut NV</li>
+            <li>Anna De Codorníu Rose Brut NV</li></ul>
+            <br />
+        </div> <!-- end of 2 pt split for key points -->
+
+		<!-- The bottom buttons -->
+        <div class="product-actions full-width">
+          <span class="add-to-cart">
+          <span class="action-wrapper">
+          <span class="action-name">Add to my party</span>
+          </span></span>
+                        
+          <span class="add-to-favorites">
+          <span class="action-wrapper">
+          <span class="action-name">Add to wishlist</span>
+          </span></span>
+         </div>
+       </div> <!-- closes 5 pt description box -->
+   	</div> <!-- closes full 8 pt span -->
+   </div> <!-- end of section group -->
+  </div> <!-- End of content -->
+
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="gear">Home</a></li>
+        <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist">Activities</a></li>
+        <li><a href="#venues" data-icon="check">Venues</a></li>
+        <li><a href="#accomodation" data-icon="check">Accommodation</a></li>
+        <li><a href="#options" data-icon="check">Options</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div><!-- end of page -->
+
+
+
+<!-- ACTIVITY 5 -->
+
+
+
+
+<div data-role="page" id="pampering">
+  <div data-role="header" data-position="fixed">
+    <a href="javascript:history.back()" data-role="button">Back</a>
+    <h1>Cheeky Hen - Mini Pampering</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+  <div class="section group">
+    <div class="col span_8_of_8"><!-- Full grid of product -->
+       <div class="grid-view product">
+         <div class="col span_3_of_8"> <!-- activity image -->
+            <img src="images/act/act-005.jpg" alt="Mini Pampering" class="center" style="padding-top:10%;">
+         </div> <!-- End of activity image -->
+       
+       <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
+        	<div class="product-info">
+               <h3>Mini Pampering</h3>
+               <span class="price">From £32.00</span>
+			   <div class="rating-box">
+				 <span>3 Review(s)</span>
+			    </div>
+             </div>
+       <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
+          <p>Are you on a budget but still fancy a pamper? Well this one’s for you: choose from any of the following 15 minute treatments including a mini manicure, face and head massage, neck, back and shoulder massage and a hand or foot massage. This 15 minutes of calm will rejuvenate and revive you – and the beauty of it is that you won’t have to move a muscle from where you’re staying as the Perfect Pamper come to you and help to make your hen party weekend unforgettable!</p><br />
+       </div> <!-- end of description 3 pt -->
+       <div class="col span_2_of_8"> <!-- 2 pt for key points -->
+            <ul><li>15 minutes per person</li>
+            <li>Available 10am – 8pm Fri, Sat and Sun</li></ul>
+            <br />
+        </div> <!-- end of 2 pt split for key points -->
+
+		<!-- The bottom buttons -->
+        <div class="product-actions full-width">
+          <span class="add-to-cart">
+          <span class="action-wrapper">
+          <span class="action-name">Add to my party</span>
+          </span></span>
+                        
+          <span class="add-to-favorites">
+          <span class="action-wrapper">
+          <span class="action-name">Add to wishlist</span>
+          </span></span>
+         </div>
+       </div> <!-- closes 5 pt description box -->
+   	</div> <!-- closes full 8 pt span -->
+   </div> <!-- end of section group -->
+  </div> <!-- End of content -->
+
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="gear">Home</a></li>
+        <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist">Activities</a></li>
+        <li><a href="#venues" data-icon="check">Venues</a></li>
+        <li><a href="#accomodation" data-icon="check">Accommodation</a></li>
+        <li><a href="#options" data-icon="check">Options</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div><!-- end of page -->
+
+
+
+<!-- ACTIVITY 6 -->
+
+
+
+
+<div data-role="page" id="mammamia">
+  <div data-role="header" data-position="fixed">
+    <a href="javascript:history.back()" data-role="button">Back</a>
+    <h1>Cheeky Hen - Mamma Mia Experience</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+  <div class="section group">
+    <div class="col span_8_of_8"><!-- Full grid of product -->
+       <div class="grid-view product">
+         <div class="col span_3_of_8"> <!-- activity image -->
+            <img src="images/act/act-006.jpg" alt="Mamma Mia Experience" class="center" style="padding-top:10%;">
+         </div> <!-- End of activity image -->
+       
+       <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
+        	<div class="product-info">
+               <h3>The Mamma Mia Experience</h3>
+               <span class="price">From £14.00</span>
+			   <div class="rating-box">
+				 <span>3 Review(s)</span>
+			    </div>
+             </div>
+       <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
+          <p>The Mamma Mia Experience combines all the fun of karaoke with the film itself. Simply choose which character you’re going to be from the film, receive your song lyrics and t shirt with that character’s name on and sing away to all the ABBA classics that make the film great! You’ll also get to see the very film itself in your own, personal cinema so you can relive the fun and get inspiration!</p><br />
+       </div> <!-- end of description 3 pt -->
+       <div class="col span_2_of_8"> <!-- 2 pt for key points -->
+            <ul><li>All the Hens will enjoy a glass of Bubbly OR a Fishbowl of Cocktail and nibbles on arrival</li>
+            <li>Any group size welcome (min payment for 10 required)</li>
+            <li>Allow for up to 2 Hours</li>
+            <li>Start time 12pm – 2pm – 4pm or 6pm</li></ul>
+            <br />
+        </div> <!-- end of 2 pt split for key points -->
+
+		<!-- The bottom buttons -->
+        <div class="product-actions full-width">
+          <span class="add-to-cart">
+          <span class="action-wrapper">
+          <span class="action-name">Add to my party</span>
+          </span></span>
+                        
+          <span class="add-to-favorites">
+          <span class="action-wrapper">
+          <span class="action-name">Add to wishlist</span>
+          </span></span>
+         </div>
+       </div> <!-- closes 5 pt description box -->
+   	</div> <!-- closes full 8 pt span -->
+   </div> <!-- end of section group -->
+  </div> <!-- End of content -->
+
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="gear">Home</a></li>
+        <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist">Activities</a></li>
+        <li><a href="#venues" data-icon="check">Venues</a></li>
+        <li><a href="#accomodation" data-icon="check">Accommodation</a></li>
+        <li><a href="#options" data-icon="check">Options</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div><!-- end of page -->
+
+
+
+<!-- ACTIVITY 7 -->
+
+
+
+
+<div data-role="page" id="popvideo">
+  <div data-role="header" data-position="fixed">
+    <a href="javascript:history.back()" data-role="button">Back</a>
+    <h1>Cheeky Hen - Pop Video</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+  <div class="section group">
+    <div class="col span_8_of_8"><!-- Full grid of product -->
+       <div class="grid-view product">
+         <div class="col span_3_of_8"> <!-- activity image -->
+            <img src="images/act/act-007.jpg" alt="Pop Video" class="center" style="padding-top:10%;">
+         </div> <!-- End of activity image -->
+       
+       <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
+        	<div class="product-info">
+               <h3>Film Your Own Pop Video!</h3>
+               <span class="price">From £32.00</span>
+			   <div class="rating-box">
+				 <span>3 Review(s)</span>
+			    </div>
+             </div>
+       <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
+          <p>This is your chance to make film history! To make your hen weekend truly momentous why not record it on film? Choose from an extensive list of over a hundred songs and become whoever you want to be in rock, pop or rap history! With a starring role for the hen and a copy of the DVD for her at the end of it, this will make your weekend go down in legendary status!</p><br />
+       </div> <!-- end of description 3 pt -->
+       <div class="col span_2_of_8"> <!-- 2 pt for key points -->
+            <ul><li>Bubbly included</li>
+            <li>2 hour 15 minute session</li>
+            <li>Accessories and outfits provided for use on the day</li></ul>
+            <br />
+        </div> <!-- end of 2 pt split for key points -->
+
+		<!-- The bottom buttons -->
+        <div class="product-actions full-width">
+          <span class="add-to-cart">
+          <span class="action-wrapper">
+          <span class="action-name">Add to my party</span>
+          </span></span>
+                        
+          <span class="add-to-favorites">
+          <span class="action-wrapper">
+          <span class="action-name">Add to wishlist</span>
+          </span></span>
+         </div>
+       </div> <!-- closes 5 pt description box -->
+   	</div> <!-- closes full 8 pt span -->
+   </div> <!-- end of section group -->
+  </div> <!-- End of content -->
+
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="gear">Home</a></li>
+        <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist">Activities</a></li>
+        <li><a href="#venues" data-icon="check">Venues</a></li>
+        <li><a href="#accomodation" data-icon="check">Accommodation</a></li>
+        <li><a href="#options" data-icon="check">Options</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div><!-- end of page -->
+
+
+
+<!-- ACTIVITY 8 -->
+
+
+
+
+<div data-role="page" id="bellydancing">
+  <div data-role="header" data-position="fixed">
+    <a href="javascript:history.back()" data-role="button">Back</a>
+    <h1>Cheeky Hen - Belly Dancing</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+  <div class="section group">
+    <div class="col span_8_of_8"><!-- Full grid of product -->
+       <div class="grid-view product">
+         <div class="col span_3_of_8"> <!-- activity image -->
+            <img src="images/act/act-008.jpg" alt="Belly Dancing" class="center" style="padding-top:10%;">
+         </div> <!-- End of activity image -->
+       
+       <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
+        	<div class="product-info">
+               <h3>Belly Dancing Lesson</h3>
+               <span class="price">From £20.00</span>
+			   <div class="rating-box">
+				 <span>3 Review(s)</span>
+			    </div>
+             </div>
+       <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
+          <p>It’s time to unleash the exotic and mystical side of you. Learn the art of hypnotizing with your hips with this lesson in all things Eastern. Not only will you get to grips with some fun new moves, you will also have fun getting fit and can bust out your new moves in the club later on.</p><br />
+       </div> <!-- end of description 3 pt -->
+       <div class="col span_2_of_8"> <!-- 2 pt for key points -->
+            <ul><li>All the Hens will enjoy a glass of Bubbly and nibbles on arrival</li>
+            <li>Any group size welcome (min payment for 10 required)</li>
+            <li>Allow for up to 2 Hours</li>
+            <li>Start time 12pm – 2pm – 4pm or 6pm</li></ul>
+            <br />
+        </div> <!-- end of 2 pt split for key points -->
+
+		<!-- The bottom buttons -->
+        <div class="product-actions full-width">
+          <span class="add-to-cart">
+          <span class="action-wrapper">
+          <span class="action-name">Add to my party</span>
+          </span></span>
+                        
+          <span class="add-to-favorites">
+          <span class="action-wrapper">
+          <span class="action-name">Add to wishlist</span>
+          </span></span>
+         </div>
+       </div> <!-- closes 5 pt description box -->
+   	</div> <!-- closes full 8 pt span -->
+   </div> <!-- end of section group -->
+  </div> <!-- End of content -->
+
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="gear">Home</a></li>
+        <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist">Activities</a></li>
+        <li><a href="#venues" data-icon="check">Venues</a></li>
+        <li><a href="#accomodation" data-icon="check">Accommodation</a></li>
+        <li><a href="#options" data-icon="check">Options</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div><!-- end of page -->
+
+
+
+<!-- ACTIVITY 9 -->
+
+
+
+
+<div data-role="page" id="butlers">
+  <div data-role="header" data-position="fixed">
+    <a href="javascript:history.back()" data-role="button">Back</a>
+    <h1>Cheeky Hen - Butlers</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+  <div class="section group">
+    <div class="col span_8_of_8"><!-- Full grid of product -->
+       <div class="grid-view product">
+         <div class="col span_3_of_8"> <!-- activity image -->
+            <img src="images/act/act-009.jpg" alt="Butlers" class="center" style="padding-top:10%;">
+         </div> <!-- End of activity image -->
+       
+       <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
+        	<div class="product-info">
+               <h3>Bare Bum Butlers</h3>
+               <span class="price">From £39.00</span>
+			   <div class="rating-box">
+				 <span>3 Review(s)</span>
+			    </div>
+             </div>
+       <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
+          <p>Be treated like a princess in the luxury of your own surroundings. What could be better than being served nibbles and drinks by a bare bum butler attending your every need? This is perfect for any hens who need respite after a long and journey and need a little bit of TLC. Unwind, catch up and enjoy a girly evening all altogether with one welcome addition!</p><br />
+       </div> <!-- end of description 3 pt -->
+       <div class="col span_2_of_8"> <!-- 2 pt for key points -->
+            <ul><li>Minimum booking time of 1 hour</li>
+            <li>Price based on 1 butler for 2 hours but you can upgrade</li>
+            <li>Please respect the waiters’ personal space – no touching etc</li></ul>
+            <br />
+        </div> <!-- end of 2 pt split for key points -->
+
+		<!-- The bottom buttons -->
+        <div class="product-actions full-width">
+          <span class="add-to-cart">
+          <span class="action-wrapper">
+          <span class="action-name">Add to my party</span>
+          </span></span>
+                        
+          <span class="add-to-favorites">
+          <span class="action-wrapper">
+          <span class="action-name">Add to wishlist</span>
+          </span></span>
+         </div>
+       </div> <!-- closes 5 pt description box -->
+   	</div> <!-- closes full 8 pt span -->
+   </div> <!-- end of section group -->
+  </div> <!-- End of content -->
+
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="gear">Home</a></li>
+        <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist">Activities</a></li>
+        <li><a href="#venues" data-icon="check">Venues</a></li>
+        <li><a href="#accomodation" data-icon="check">Accommodation</a></li>
+        <li><a href="#options" data-icon="check">Options</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div><!-- end of page -->
+
+<!-- End of activity individual pages -->
+
+<div data-role="page" id="venues">
+<div data-role="header" data-position="fixed">
+    <a href="javascript:history.back()" data-role="button">Back</a>
+    <h1>Cheeky Hen - Venues</h1>
+  </div><!-- /header -->
+
+  <div data-role="content"> 
+  
+
+  
+  </div>
+
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="gear">Home</a></li>
+        <li><a href="#activities" data-icon="refresh">Activities</a></li>
+        <li><a href="#venues" data-icon="check" class="ui-btn-active ui-state-persist">Venues</a></li>
+        <li><a href="#accomodation" data-icon="check">Accommodation</a></li>
+        <li><a href="#options" data-icon="check">Options</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  </div>
+  
+<div data-role="page" id="accomodation">
+<div data-role="header" data-position="fixed">
+    <a href="javascript:history.back()" data-role="button">Back</a>
+    <h1>Cheeky Hen - Accommodation</h1>
+  </div><!-- /header -->
+
+  <div data-role="content"> 
+  
+  
+  
+  </div>
+
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="gear">Home</a></li>
+        <li><a href="#activities" data-icon="refresh">Activities</a></li>
+        <li><a href="#venues" data-icon="check">Venues</a></li>
+        <li><a href="#accomodation" data-icon="check" class="ui-btn-active ui-state-persist">Accommodation</a></li>
+        <li><a href="#options" data-icon="check">Options</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  </div>
+  
+<div data-role="page" id="options">
+<div data-role="header" data-position="fixed">
+    <a href="javascript:history.back()" data-role="button">Back</a>
+    <h1>Cheeky Hen - Options</h1>
+  </div><!-- /header -->
+
+  <div data-role="content"> 
+ 
+        <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+        <legend>Music:</legend>
+		<button onclick="document.getElementById('backingMusic').play()">Play Music</button>
+		<button onclick="document.getElementById('backingMusic').pause(); document.getElementById('myTune').currentTime = 0;">Stop Music</button>
+        </fieldset>
+        </div>
+
+       
+        <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+              <legend>Colour scheme:</legend>
+                  <input type="radio" name="radio-choice-1" id="radio-choice-1c" value="choice-1" />
+                  <label for="radio-choice-1c">Default</label>
+
+                  <input type="radio" name="radio-choice-1" id="radio-choice-2c" value="choice-2"  />
+                  <label for="radio-choice-2c">Summer</label>
+
+                  <input type="radio" name="radio-choice-1" id="radio-choice-3c" value="choice-3"  />
+                  <label for="radio-choice-3c">Winter</label>
+
+                  <input type="radio" name="radio-choice-1" id="radio-choice-4c" value="choice-4"  />
+                  <label for="radio-choice-4c">Candy</label>
+            </fieldset>
+        </div>
+        <hr>
+	<a href="mailto:rjo11@uni.brighton.ac.uk?subject=Feedback-for-cheeky-hen-app" data-role="button">Feedback</a>
+	<a href="http://www.i1mp.com" data-role="button">Website</a>
+  
+  </div>
+
+<div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="gear">Home</a></li>
+        <li><a href="#activities" data-icon="refresh">Activities</a></li>
+        <li><a href="#venues" data-icon="check">Venues</a></li>
+        <li><a href="#accomodation" data-icon="check">Accommodation</a></li>
+        <li><a href="#options" data-icon="check" class="ui-btn-active ui-state-persist">Options</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  </div>
+  
+
+
+</body>
+</html>
