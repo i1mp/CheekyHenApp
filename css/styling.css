@@ -8,19 +8,19 @@
 	--------------------------------------------------------------- **/
 	
 h1, h2, h3 {
-	font-family: 'Brandon Medium';
+	font-family: 'Verdana';
     font-weight: 300;
     font-style: normal;
 }
 
 p {
-	font-family: 'Brandon Regular';
+	font-family: 'Georgia';
     font-weight: normal;
     font-style: normal;
 }
 
 a, b, em{
-	font-family: 'Brandon Bold';
+	font-family: 'Georgia';
 	font-weight: normal;
     font-style: normal;
 	transition:color 0.1s, background 0.2s;
@@ -30,6 +30,9 @@ a, b, em{
 	-o-transition:color 0.1s, background 0.2s;
 }
 
+.text-center {
+	text-align: center;
+}
 	
 H3.blocktext {
 	display: block;
@@ -42,6 +45,20 @@ img.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/** That thing I'm doing with image displays */
+
+.dispimg { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+h2.imgdis { 
+   position: absolute; 
+   top: 30%; 
+   left: 0; 
+   width: 100%; 
 }
 
 
