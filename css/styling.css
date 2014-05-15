@@ -311,13 +311,6 @@ img.splsc
 /*      PRODUCT ITEMS        */
 /* ========================= */
 
-.owl-carousel-wrap{
-	padding:0;
-}
-
-.owl-carousel .owl-item{
-	padding:0 15px;
-}
 
 .product{
 	margin-bottom:30px;	
@@ -441,95 +434,7 @@ a.product-hover:hover{
 	transform:scale(1.1);
 }
 
-.product-actions{
-	color:#fff;
-	display:table;
-	width:100%;
-	overflow:hidden;
-}
 
-span.product-action{
-	color:#fff!important;
-}
-
-span.action-wrapper{
-	position:relative;
-	display:block;	
-}
-
-.product-actions>span{
-	position:relative;
-	border-left:1px solid #e7f9fc;
-	cursor:pointer;
-	width:40px;
-	height:40px;
-	padding:9px 0 0 8px;
-	display:table-cell;
-	transition:all 0.3s;
-	-webkit-transition:all 0.3s;
-	-moz-transition:all 0.3s;
-	-ms-transition:all 0.3s;
-	-o-transition:all 0.3s;
-}
-
-.product-actions>span.current{
-	width:auto;	
-}
-
-.product-actions>span.current span.action-name{
-	left:30px;
-	width:220px;
-	opacity:1;
-	-webkit-opacity:1;
-	-moz-opacity:1;
-	-ms-opacity:1;
-	-o-opacity:1;
-	white-space:nowrap;
-}
-
-span.add-to-cart{
-	background:#f5791f;
-}
-
-span.add-to-cart:hover{
-	background:#d35400;	
-}
-
-span.add-to-cart .icons{
-	margin-right:8px;
-}
-
-span.add-to-favorites{
-	background:#e74c3c;
-}
-
-span.add-to-favorites:hover{
-	background:#c0392b;	
-}
-
-span.add-to-compare{
-	background:#3498db;
-}
-
-span.add-to-compare:hover{
-	background:#2980b9;	
-}
-
-span.action-name{
-	position:absolute;
-	left:85px;
-	text-transform:uppercase;
-	opacity:0;
-	-webkit-opacity:0;
-	-moz-opacity:0;
-	-ms-opacity:0;
-	-o-opacity:0;
-	transition:all 0.3s;
-	-webkit-transition:all 0.3s;
-	-moz-transition:all 0.3s;
-	-ms-transition:all 0.3s;
-	-o-transition:all 0.3s;
-}
 
 .product-info p{
 	font-size:14px;	
@@ -541,29 +446,14 @@ span.action-name{
 	position:relative;	
 }
 
-.product.grid-view .product-actions{
-	position: absolute;
-	bottom: 1px;
-	left: -14px;
-	right: 0;
-}
 
-.product.grid-view .product-actions.full-width span.action-name{
-	opacity:1;
-	-webkit-opacity:1;
-	-moz-opacity:1;
-	-ms-opacity:1;
-	-o-opacity:1;
-	left:30px;
-}
 
 .grid-view .product-image{
 	padding:0;	
 }
 
-.product.grid-view .product-actions>span{
-	width:33.3333%;
-}
+
+/** Loaders **/
 
 .circle {
     background-color: rgba(0,0,0,0);
