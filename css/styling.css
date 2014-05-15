@@ -17,6 +17,8 @@ p {
 	font-family: 'Georgia';
     font-weight: normal;
     font-style: normal;
+	font-size:medium;
+	
 }
 
 a, b, em{
@@ -49,19 +51,88 @@ img.center {
 
 /** That thing I'm doing with image displays */
 
-.dispimg { 
-   position: relative; 
-   width: 100%; /* for IE 6 */
+
+img{
+	width:100%;height:100%;-webkit-border-radius: 40px;-moz-border-radius: 40px;border-radius: 40px;
 }
 
-h2.imgdis { 
-   position: absolute; 
-   top: 30%; 
-   left: 0; 
-   width: 100%; 
+/*
+ * Caption component
+ */
+.caption {
+    position: relative;
+    overflow: hidden;
+
+    /* Only the -webkit- prefix is required these days */
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
 }
 
+.caption::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    transition: background .35s ease-out;
+}
 
+.caption:hover::before {
+    background: rgba(200, 200, 200, .5);
+}
+
+.caption__media {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.caption__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+
+    transition: -webkit-transform .35s ease-out;
+    transition:         transform .35s ease-out;
+}
+
+.caption:hover .caption__overlay {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+
+.caption__overlay__title {
+    -webkit-transform: translateY( -webkit-calc(-100% - 50px) );
+            transform: translateY( calc(-100% - 50px) );
+
+    transition: -webkit-transform .35s ease-out;
+    transition:         transform .35s ease-out;
+}
+
+.caption:hover .caption__overlay__title {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+
+img.splsc
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:auto;
+  height:auto;
+}
+}
 /* ---------------------------------------
 	Grid system
 	From http://www.responsivegridsystem.com/
@@ -492,4 +563,92 @@ span.action-name{
 
 .product.grid-view .product-actions>span{
 	width:33.3333%;
+}
+
+.circle {
+    background-color: rgba(0,0,0,0);
+    border: 5px solid rgba(0,183,229,0.9);
+    opacity: .9;
+    border-right: 5px solid rgba(0,0,0,0);
+    border-left: 5px solid rgba(0,0,0,0);
+    border-radius: 50px;
+    box-shadow: 0 0 35px #2187e7;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    -moz-animation: spinPulse 1s infinite ease-in-out;
+    -webkit-animation: spinPulse 1s infinite linear;
+}
+
+.circle1 {
+    background-color: rgba(0,0,0,0);
+    border: 5px solid rgba(0,183,229,0.9);
+    opacity: .9;
+    border-left: 5px solid rgba(0,0,0,0);
+    border-right: 5px solid rgba(0,0,0,0);
+    border-radius: 50px;
+    box-shadow: 0 0 15px #2187e7;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: -50px;
+    -moz-animation: spinoffPulse 1s infinite linear;
+    -webkit-animation: spinoffPulse 1s infinite linear;
+}
+
+@-moz-keyframes spinPulse {
+    0% {
+        -moz-transform: rotate(160deg);
+        opacity: 0;
+        box-shadow: 0 0 1px #2187e7;
+    }
+
+    50% {
+        -moz-transform: rotate(145deg);
+        opacity: 1;
+    }
+
+    100% {
+        -moz-transform: rotate(-320deg);
+        opacity: 0;
+    };
+}
+
+@-moz-keyframes spinoffPulse {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+    };
+}
+
+@-webkit-keyframes spinPulse {
+    0% {
+        -webkit-transform: rotate(160deg);
+        opacity: 0;
+        box-shadow: 0 0 1px #2187e7;
+    }
+
+    50% {
+        -webkit-transform: rotate(145deg);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: rotate(-320deg);
+        opacity: 0;
+    };
+}
+
+@-webkit-keyframes spinoffPulse {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    };
 }

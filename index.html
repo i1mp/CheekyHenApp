@@ -2,60 +2,102 @@
 <html> 
 <head> 
   <title>Cheeky Hen! Your ultimate hen party in Brighton</title> 
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="viewport" content="initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" />
+  <link rel="stylesheet" href="css/pink.css" title="pinkstyle"/>
   <link rel="stylesheet" href="css/styling.css" />
 <link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link href="css/video-js.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/fonts.css" />
   <link rel="shortcut icon" href="images/favicon.ico">
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-
+<script src="js/scripts.js"></script>
   <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
   <script src="js/functions.js"></script>
+  <script src="js/video.js"></script>
+  <script type="text/javascript">
+      function changeCSS(cssFile, cssLinkIndex) {
+ 
+        var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+ 
+        var newlink = document.createElement("link");
+        newlink.setAttribute("rel", "stylesheet");
+        newlink.setAttribute("type", "text/css");
+        newlink.setAttribute("href", cssFile);
+ 
+        document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+      }
+    </script>
 
 </head> 
 <body> 
+<div class="circle"></div><div class="circle1"></div>
 <audio id="backingMusic" autoplay loop preload>
   <source src="media/music.mp3">
   <source src="media/music.ogg">
 </audio>
-<div data-role="page" id="home">
 
-  <div data-role="header" data-position="fixed">
-    <h1>Cheeky Hen</h1>
-    <a href="#cheekyplan" data-role="button" data-transition="flow" data-inline="true">Cheeky Plan</a>
-  </div><!-- /header -->
-
+<div data-role="page" id="splash">
   <div data-role="content"> 
     
     <div class="ui-body">
-    <div class="section group">
-	<div class="col span_8_of_8">
-    <img src="images/icon.jpg" class="center" alt="Cheeky Hen">
+	<div class="section group">
+    <div class="col span_3_of_9"></div>
+    <div class="col span_3_of_9">
+    	<article class="caption">
+    	<a href="#home" data-transition="slidefade" data-inline="true" onclick="document.getElementById('backingMusic').play()"><img src="images/splash.png" class="splsc caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title text-center">Launch <em>Cheeky Hen</em></h2>
+        <p class="caption__overlay__content text-center">Click me to launch the application</p>
+    	</div></a>
+		</article>
+		<div class="circle"></div><div class="circle1">Loading</div>
     </div>
+    <div class="col span_3_of_9"></div>
     </div>
-    <div class="section group">
-	<div class="col span_3_of_8">
-      <h1 class="text-center">Cheeky Hen!</h1>
-      </div>
-      <div class="col span_5_of_8">
-      <p class="text-center">Introducing <b>the</b> Hen Party app to plan your ultimate hen party in the sunny city of Brighton and Hove!<br />Navigating through this app you'll find activities perfect for any party size, the perfect venues for those 'quiet' drinks with your chums, and the all important guide to accommodation - finding you the very best place to lay your weary heads when the partying is done.</p>
-      </div>
-      </div>
-      <hr>
-      <div class="section group">
-	<div class="col span_3_of_8">
-    </div><div class="col span_2_of_8">
-      <h3 class="blocktext">Check out our top packages</h3></div>
-      <div class="col span_3_of_8"></div>
-      <div class="col span_8_of_8">
-      <p>Small carousel of three pre-conceived packages</p>
-      </div>
-      </div>
     </div><!-- /themed container -->
 
+  </div><!-- /content -->
+  </div><!-- End of splash page -->
+  
+<div data-role="page" id="home">
+  <div data-role="header" data-position="fixed">
+    <h1>Cheeky Hen</h1>
+  </div><!-- /header -->
+
+  <div data-role="content"> 
+    <div class="ui-body">
+    	<div class="section group">
+			<div class="col span_8_of_8">
+      			<h1 class="text-center">Welcome to<br><em>Cheeky Hen</em></h1>
+                <small class="text-center">Your one stop app for the perfect Brighton Hen Weekend</small>
+      		</div>
+        </div>
+        <div class="section group">
+      		<div class="col span_5_of_8">
+      			<p class="text-center">We've scoured Brighton for <em>the</em> best activities and accommodation to help you plan the ultimate hen weekend - we like to call these <em>Cheeky Hen Weekends</em>. Full of fun and frolics to give you a good send off into married life.</p>
+				<h1>Cheeky Promises</h1>
+				<ol>
+				<li>We offer the best value for money - if you find it cheaper elsewhere, let us know... we won't just match it, we'll give you a bounty for finding this bargain!</li>
+				<li>We believe in giving you the best experience possible. This means no fuss. All your bookings are viewable from your Cheeky Plan and can be changed at any time</li>
+				<li>Booking references, tickets, reservations... that's a lot of paperwork. You did all of this on your device, and that's where you'll find these reservations! Each activity will give you a unique barcode to scan - this is your pass for the activities!</li>
+				<li>We know you'll be too busy enjoying your Cheeky Hen Party to need us - but in case you do, someone will be available to help at all times. For your peace of mind</li>
+				</ol>
+      		</div>
+            <div class="col span_3_of_8">
+            	<h3>Check out <em>Tanya</em>'s Cheeky Hen Party!</h3>
+                <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="320" height="240"
+					  poster="images/icon2.jpg"
+					  data-setup="{}">
+					<source src="media/seq13.webm" type='video/webm' />
+				</video>
+            </div>
+      	</div>
+      <hr>
+	  
+    </div><!-- /UI Body -->
   </div><!-- /content -->
 
   <div data-role="footer" data-position="fixed">
@@ -63,7 +105,6 @@
       <ul>
         <li><a href="#home" data-icon="gear" class="ui-btn-active ui-state-persist" >Home</a></li>
         <li><a href="#activities" data-icon="refresh" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
         <li><a href="#accomodation" data-icon="check" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -84,27 +125,63 @@
     <div class="ui-body">
     <div class="section group">
 	<div class="col span_8_of_8">
-    <img src="images/icon.jpg" class="center" alt="Cheeky Hen">
+    	<h1 class="text-center">Cheeky Plan</h1>
     </div>
+    <div class="col span_1_of_8"></div>
+    <div class="col span_6_of_8">
+    	<p>This section and functionality of the app is currently unavailable. Please see below for the steps that this page will follow.</p>
     </div>
-    <div class="section group">
-	<div class="col span_3_of_8">
-      <h1 class="text-center">Your Cheeky Plan!</h1>
-      </div>
-      <div class="col span_5_of_8">
-      <p class="text-center">This is <em>your</em> Cheeky Plan!<br>All the fun activities and events you have chosen for your perfect hen weekend in one place - just hit the contact buttons to organise them!</p>
-      </div>
-      </div>
-      <hr>
-      <div class="section group">
-	<div class="col span_3_of_8">
-    </div><div class="col span_2_of_8">
-      <h3 class="blocktext">Check out our top packages</h3></div>
-      <div class="col span_3_of_8"></div>
-      <div class="col span_8_of_8">
-      <p>Small carousel of three pre-conceived packages</p>
-      </div>
-      </div>
+    <div class="col span_1_of_8"></div>
+    </div>
+	<!-- Steps for cheeky plan -->
+		<div class="container">
+			<div class="row form-group">
+				<div class="col-xs-12">
+					<ul class="nav nav-pills nav-justified thumbnail setup-panel">
+						<li class="active"><a href="#step-1">
+							<h4 class="list-group-item-heading">Step 1</h4>
+							<p class="list-group-item-text">Create your Cheeky Hen Party</p>
+						</a></li>
+						<li class="disabled"><a href="#step-2">
+							<h4 class="list-group-item-heading">Step 2</h4>
+							<p class="list-group-item-text">Customise your Cheeky Hen Party</p>
+						</a></li>
+						<li class="disabled"><a href="#step-3">
+							<h4 class="list-group-item-heading">Step 3</h4>
+							<p class="list-group-item-text">Secure your Cheeky Hen Party</p>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row setup-content" id="step-1">
+				<div class="col-xs-12">
+					<div class="col-md-12 well text-center">
+						<h1> Create</h1>
+						<p>This is the fun bit - browse the app to find the perfect place to stay, mix it up with the best activities for you and your Cheeky Hens and create the perfect Cheeky Hen Party!</p>
+						<button id="activate-step-2" class="btn btn-primary btn-lg">Next Step</button>
+					</div>
+				</div>
+			</div>
+			<div class="row setup-content" id="step-2">
+				<div class="col-xs-12">
+					<div class="col-md-12 well">
+						<h1 class="text-center"> Customise</h1>
+						<p>Once you have picked all the key components of your Cheeky Hen party you will find them all stored in your Cheeky Plan. This section will act as a sort of shopping basket where you will be able to update your plan by adding or removing components, pick dates and times, and adjust the number of guests. This will of course give you all the pricing information in real time based on your chosen options.</p>
+						<button id="activate-step-3" class="btn btn-primary btn-lg">Next Step</button>
+					</div>
+				</div>
+			</div>
+			<div class="row setup-content" id="step-3">
+				<div class="col-xs-12">
+					<div class="col-md-12 well">
+						<h1 class="text-center"> Secure</h1>
+						<p>Time to secure your Cheeky Hen Party! You will have adjusted your components to create the ultimate package you are happy with which will show you a price in real time based on the options you select.<br>The next step will be to secure these details, through an in-app form you will be able to enter your personal and payment details - and will be sent a confirmation e-mail.<br>You're done! Enjoy your Cheeky Hen Party!</p>	
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- End of steps -->
+
     </div><!-- /themed container -->
 
   </div><!-- /content -->
@@ -114,7 +191,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -134,48 +211,85 @@
   <div class="section group">
   <div class="col span_8_of_8">
   <h1 class="text-center">Cheeky Activities </h1>
-  <p>There’s so much pressure to make the bride-to-be's hen weekend the most memorable in history: the activities form the basis of your <em>Cheeky Hen</em> party so it’s important you get it right. From dance lessons to perfume workshops to filming your own pop video - activities in Brighton are endless. Add a little something extra to your weekend to make it perfect.</p>
+  <p>There's so much pressure to make the bride-to-be's hen weekend the most memorable in history: the activities form the basis of your Cheeky Hen party so it's important you get it right. From dance lessons to perfume workshops to filming your own pop video - activities in Brighton are endless. Add a little something extra to your weekend to make it perfect.</p>
   <hr>
   </div>
   </div>
   
   <div class="section group">
-	<div class="col span_3_of_9">
-    	<a href="#life_drawing" data-transition="flow" data-inline="true"><img src="images/act/act-001.jpg" class="center" alt=""></a>
+	<div class="col span_3_of_9"><article class="caption">
+    	<a href="#life_drawing" data-transition="flow" data-inline="true"><img src="images/act/act-001.jpg" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">Life Drawing Session</h2>
+        <p class="caption__overlay__content">From just £34.50pp this is a must have treat for any Cheeky Hen party visiting Brighton!</p>
+    </div></a>
+</article>
     </div>
     
-    <div class="col span_3_of_9">
-     <a href="#paintball" data-transition="flow" data-inline="true"><img src="images/act/act-002.jpg" class="center" alt=""></a>
+    <div class="col span_3_of_9"><article class="caption">
+     <a href="#paintball" data-transition="flow" data-inline="true"><img src="images/act/act-002.jpg" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">Afternoon of Paintball</h2>
+        <p class="caption__overlay__content">Not every Hen invisions balls flying at her face during her hen weekend - but some Cheeky Hens do! From just £30pp</p>
+    </div></a>
+</article>
     </div>
     
-    <div class="col span_3_of_9">
-    	<a href="#pimpyourpants" data-transition="flow" data-inline="true"><img src="images/act/act-003.jpg" class="center" alt=""></a>
+    <div class="col span_3_of_9"><article class="caption">
+    	<a href="#pimpyourpants" data-transition="flow" data-inline="true"><img src="images/act/act-003.jpg" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">Pimp Your Pants Workshop</h2>
+        <p class="caption__overlay__content">Who wants boring regular pants - when you can design and pimp out a pair that are as unique as you are!? This activity is best undertaken in groups of 8 or more and you should take your own (clean) knickers - from just £21pp</p>
+    </div></a>
+</article>
     </div>
    </div>
    <div class="section group">
-    <div class="col span_3_of_9">
-    	<a href="#cavatasting" data-transition="flow" data-inline="true"><img src="images/act/act-004.jpg" class="center" alt=""></a>
+    <div class="col span_3_of_9"><article class="caption">
+    	<a href="#cavatasting" data-transition="flow" data-inline="true"><img src="images/act/act-004.jpg" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">Cava Tasting</h2>
+        <p class="caption__overlay__content">Every <em>Cheeky Hen</em> loves some bubbles! Why not spend some time sampling some fine Cava? From just £17pp</p>
+    </div></a>
+</article>
     </div>
     
-    <div class="col span_3_of_9">
-    	<a href="#pampering" data-transition="flow" data-inline="true"><img src="images/act/act-005.jpg" class="center" alt=""></a>
+    <div class="col span_3_of_9"><article class="caption">
+    	<a href="#pampering" data-transition="flow" data-inline="true"><img src="images/act/act-005.jpg" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">Afternoon of Pampering</h2>
+        <p class="caption__overlay__content">Have you partied a little too hard? Or do you just want to be relaxed and fresh for your wedding? We've got what you need - from just £32pp feel relaxed and indulged.</p>
+    </div></a>
+</article>
     </div>
     
-    <div class="col span_3_of_9">
-    	<a href="#mammamia" data-transition="flow" data-inline="true"><img src="images/act/act-006.jpg" class="center" alt=""></a>
+    <div class="col span_3_of_9"><article class="caption">
+    	<a href="#mammamia" data-transition="flow" data-inline="true"><img src="images/act/act-006.jpg" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">The Mamma Mia Experience</h2>
+        <p class="caption__overlay__content">Love singing? Why not take on the <em>Mamma Mia Experience</em> to show off your vocals and have a ball with all your <em>Cheeky Hens</em> from just £14pp</p>
+    </div></a>
+</article>
     </div>
    </div>
    <div class="section group">    
-    <div class="col span_3_of_9">
-    	<a href="#popvideo" data-transition="flow" data-inline="true"><img src="images/act/act-007.jpg" class="center" alt=""></a>
+    <div class="col span_3_of_9"><article class="caption">
+    	<a href="#popvideo" data-transition="flow" data-inline="true"><img src="images/act/act-007.jpg" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">Pop Video Experience</h2>
+        <p class="caption__overlay__content">Ever fancied yourself as a popstar? Now's your chance to show this to the world! You and your <em>Cheeky Hens</em> will star in your very own pop music video! From just £32pp</p>
+    </div></a>
+</article>
     </div>
     
-    <div class="col span_3_of_9">
-    	<a href="#bellydancing" data-transition="flow" data-inline="true"><img src="images/act/act-008.jpg" class="center" alt=""></a>
+    <div class="col span_3_of_9"><article class="caption">
+    	<a href="#bellydancing" data-transition="flow" data-inline="true"><img src="images/act/act-008.jpg" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">Belly Dancing Experience</h2>
+        <p class="caption__overlay__content">Whether you have experience or just want to learn a sexy new skill - why not try our <em>Belly Dancing Experience</em> to discover something new. From just £20pp</p>
+    </div></a>
+</article>
     </div>
 
-    <div class="col span_3_of_9">
-    	<a href="#butlers" data-transition="flow" data-inline="true"><img src="images/act/act-009.jpg" class="center" alt=""></a>
+    <div class="col span_3_of_9"><article class="caption">
+    	<a href="#butlers" data-transition="flow" data-inline="true"><img src="images/act/act-009.jpg" class="center caption_media" alt="">
+        <div class="caption__overlay">
+        <h2 class="caption__overlay__title">Bare Bum Butlers</h2>
+        <p class="caption__overlay__content">Who doesn't want to be waited on by a buff bloke wearing nothing but an apron? Well... now you and your <em>Cheeky Hens</em> can! From just £30pp</p>
+    </div></a>
+</article>
     </div>
   </div>
 
@@ -184,7 +298,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -214,31 +328,28 @@
        <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Life Drawing with a Top Male Model</h3>
-               <span class="price">£34.50</span>
+               <span class="price"> £34.50</span>
 			   <div class="rating-box">
 				 <span>3 Review(s)</span>
 			    </div>
              </div>
        <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
-          <p>Appreciate art?! How about a life drawing class with your very own most handsome and gorgeous Brighton male model? For 60 mins you and your friends can draw still life portraits of one of Brighton’s very best male models and then have your photos taken with him so you can always remember the fun! The activity will take place in your Brighton house and they can provide the drawing materials for an extra £5 each or you can bring your own. <br />Not to be missed.</p><br />
+          <p>Appreciate art?! How about a life drawing class with your very own most handsome and gorgeous Brighton male model? For 60 mins you and your friends can draw still life portraits of one of Brighton's very best male models and then have your photos taken with him so you can always remember the fun! The activity will take place in your Brighton house and they can provide the drawing materials for an extra  £5 each or you can bring your own. 
+Not to be missed.</p><br />
        </div> <!-- end of description 3 pt -->
        <div class="col span_2_of_8"> <!-- 2 pt for key points -->
-            <ul><li>Only Brighton’s very best male models</li>
+            <ul><li>Only Brighton's very best male models</li>
             <li>Activity takes place in your accommodation</li>
             <li>Length: 90 minutes</li>
-            <li>Materials supplied for extra £5 each or bring your own</li></ul>
+            <li>Materials supplied for extra  £5 each or bring your own</li></ul>
             <br />
         </div> <!-- end of 2 pt split for key points -->
 
 		<!-- The bottom buttons -->
         <div class="section group">
 	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+          <p class="text-center"><a href="#cheekyplan" data-role="button" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -250,7 +361,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -280,13 +391,13 @@
        <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Half a Day's Paintball</h3>
-               <span class="price">£30.00</span>
+               <span class="price"> £30.00</span>
 			   <div class="rating-box">
 				 <span>3 Review(s)</span>
 			    </div>
              </div>
        <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
-          <p>If you can’t romp around like a mad woman on a 50-acre site of woodland then when the hell can you?! This will get the adrenaline pumping as well as the competition. Nice girls don’t exist in the paintballing arena – in fact they come last so make sure you’re ready to do battle..</p><br />
+          <p>If you can't romp around like a mad woman on a 50-acre site of woodland then when the hell can you?! This will get the adrenaline pumping as well as the competition. Nice girls don't exist in the paintballing arena – in fact they come last so make sure you're ready to do battle..</p><br />
        </div> <!-- end of description 3 pt -->
        <div class="col span_2_of_8"> <!-- 2 pt for key points -->
             <ul><li>Morning session</li>
@@ -300,13 +411,9 @@
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -318,7 +425,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -350,13 +457,13 @@
        <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Pimp Your Pants!</h3>
-               <span class="price">£21.00</span>
+               <span class="price"> £21.00</span>
 			   <div class="rating-box">
 				 <span>3 Review(s)</span>
 			    </div>
              </div>
        <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
-          <p>Pimp your pants and customise your knickers with this very popular creative workshop. The workshop takes place in your accommodation so you can have a pyjama party at the same time! They provide a range of materials including ribbons, bows, iron-on applique, sequins, lace, fabric pens…. they show you the techniques and there you have it, fabulously pimped pants! Great fun for all ages in your group. Just remember not to get your knickers in a twist! If you don’t fancy pant pimping there are other workshops available; vintage bunting, garter making, corsage making, jewellery making…just ask!</p><br />
+          <p>Pimp your pants and customise your knickers with this very popular creative workshop. The workshop takes place in your accommodation so you can have a pyjama party at the same time! They provide a range of materials including ribbons, bows, iron-on applique, sequins, lace, fabric pens…. they show you the techniques and there you have it, fabulously pimped pants! Great fun for all ages in your group. Just remember not to get your knickers in a twist! If you don't fancy pant pimping there are other workshops available; vintage bunting, garter making, corsage making, jewellery making…just ask!</p><br />
        </div> <!-- end of description 3 pt -->
        <div class="col span_2_of_8"> <!-- 2 pt for key points -->
             <ul><li>Length; 3 hours</li>
@@ -368,13 +475,9 @@
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -386,7 +489,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -419,13 +522,13 @@
        <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Cava Tasting</h3>
-               <span class="price">£17.00</span>
+               <span class="price"> £17.00</span>
 			   <div class="rating-box">
 				 <span>3 Review(s)</span>
 			    </div>
              </div>
        <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
-          <p>Cava is officially the coolest fizz on the block! And what better place to learn about this Spanish sparkler and try a selection of Cavas than at the UK’s first dedicated Cava bar in Brighton.<br />Let the bar staff guide you through different styles of Cava while you learn about how Cava is made, what makes it unique, and the difference between Cava and other Sparkling Wines (Champagne, Prosecco etc).<br />You will learn how to taste Cava and have some fun with a blind tasting. Vote for your favourite to receive a discount.<br />And put your new-found knowledge to the test for the chance to win a Cava cocktail.</p><br />
+          <p>Cava is officially the coolest fizz on the block! And what better place to learn about this Spanish sparkler and try a selection of Cavas than at the UK's first dedicated Cava bar in Brighton.<br />Let the bar staff guide you through different styles of Cava while you learn about how Cava is made, what makes it unique, and the difference between Cava and other Sparkling Wines (Champagne, Prosecco etc).<br />You will learn how to taste Cava and have some fun with a blind tasting. Vote for your favourite to receive a discount.<br />And put your new-found knowledge to the test for the chance to win a Cava cocktail.</p><br />
        </div> <!-- end of description 3 pt -->
        <div class="col span_2_of_8"> <!-- 2 pt for key points -->
             <h4>Sample a selection of 6 different Cavas from our extensive range:</h4>
@@ -439,13 +542,9 @@
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -457,7 +556,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -491,13 +590,13 @@
        <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Mini Pampering</h3>
-               <span class="price">£32.00</span>
+               <span class="price"> £32.00</span>
 			   <div class="rating-box">
 				 <span>3 Review(s)</span>
 			    </div>
              </div>
        <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
-          <p>Are you on a budget but still fancy a pamper? Well this one’s for you: choose from any of the following 15 minute treatments including a mini manicure, face and head massage, neck, back and shoulder massage and a hand or foot massage. This 15 minutes of calm will rejuvenate and revive you – and the beauty of it is that you won’t have to move a muscle from where you’re staying as the Perfect Pamper come to you and help to make your hen party weekend unforgettable!</p><br />
+          <p>Are you on a budget but still fancy a pamper? Well this one's for you: choose from any of the following 15 minute treatments including a mini manicure, face and head massage, neck, back and shoulder massage and a hand or foot massage. This 15 minutes of calm will rejuvenate and revive you – and the beauty of it is that you won't have to move a muscle from where you're staying as the Perfect Pamper come to you and help to make your hen party weekend unforgettable!</p><br />
        </div> <!-- end of description 3 pt -->
        <div class="col span_2_of_8"> <!-- 2 pt for key points -->
             <ul><li>15 minutes per person</li>
@@ -507,13 +606,9 @@
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -525,7 +620,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -559,13 +654,13 @@
        <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>The Mamma Mia Experience</h3>
-               <span class="price">£14.00</span>
+               <span class="price"> £14.00</span>
 			   <div class="rating-box">
 				 <span>3 Review(s)</span>
 			    </div>
              </div>
        <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
-          <p>The Mamma Mia Experience combines all the fun of karaoke with the film itself. Simply choose which character you’re going to be from the film, receive your song lyrics and t shirt with that character’s name on and sing away to all the ABBA classics that make the film great! You’ll also get to see the very film itself in your own, personal cinema so you can relive the fun and get inspiration!</p><br />
+          <p>The Mamma Mia Experience combines all the fun of karaoke with the film itself. Simply choose which character you're going to be from the film, receive your song lyrics and t shirt with that character's name on and sing away to all the ABBA classics that make the film great! You'll also get to see the very film itself in your own, personal cinema so you can relive the fun and get inspiration!</p><br />
        </div> <!-- end of description 3 pt -->
        <div class="col span_2_of_8"> <!-- 2 pt for key points -->
             <ul><li>All the Hens will enjoy a glass of Bubbly OR a Fishbowl of Cocktail and nibbles on arrival</li>
@@ -577,13 +672,9 @@
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -595,7 +686,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -629,7 +720,7 @@
        <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Film Your Own Pop Video!</h3>
-               <span class="price">£32.00</span>
+               <span class="price"> £32.00</span>
 			   <div class="rating-box">
 				 <span>3 Review(s)</span>
 			    </div>
@@ -646,13 +737,9 @@
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -664,7 +751,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -698,13 +785,13 @@
        <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Belly Dancing Lesson</h3>
-               <span class="price">£20.00</span>
+               <span class="price"> £20.00</span>
 			   <div class="rating-box">
 				 <span>3 Review(s)</span>
 			    </div>
              </div>
        <div class="col span span_3_of_8"> <!-- 3 of 5 points for description -->
-          <p>It’s time to unleash the exotic and mystical side of you. Learn the art of hypnotizing with your hips with this lesson in all things Eastern. Not only will you get to grips with some fun new moves, you will also have fun getting fit and can bust out your new moves in the club later on.</p><br />
+          <p>It's time to unleash the exotic and mystical side of you. Learn the art of hypnotizing with your hips with this lesson in all things Eastern. Not only will you get to grips with some fun new moves, you will also have fun getting fit and can bust out your new moves in the club later on.</p><br />
        </div> <!-- end of description 3 pt -->
        <div class="col span_2_of_8"> <!-- 2 pt for key points -->
             <ul><li>All the Hens will enjoy a glass of Bubbly and nibbles on arrival</li>
@@ -716,13 +803,9 @@
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -734,7 +817,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -768,7 +851,7 @@
        <div class="col span_5_of_8 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Bare Bum Butlers</h3>
-               <span class="price">£39.00</span>
+               <span class="price"> £39.00</span>
 			   <div class="rating-box">
 				 <span>3 Review(s)</span>
 			    </div>
@@ -779,19 +862,15 @@
        <div class="col span_2_of_8"> <!-- 2 pt for key points -->
             <ul><li>Minimum booking time of 1 hour</li>
             <li>Price based on 1 butler for 2 hours but you can upgrade</li>
-            <li>Please respect the waiters’ personal space – no touching etc</li></ul>
+            <li>Please respect the waiters' personal space – no touching etc</li></ul>
             <br />
         </div> <!-- end of 2 pt split for key points -->
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -803,7 +882,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -814,33 +893,6 @@
 
 <!-- End of activity individual pages -->
 
-<div data-role="page" id="venues">
-<div data-role="header" data-position="fixed">
-    <a href="javascript:history.back()" data-role="button" data-transition="flow" data-inline="true">Back</a>
-    <h1>Cheeky Hen - Venues</h1>
-    <a href="#cheekyplan" data-role="button" data-transition="flow" data-inline="true">Cheeky Plan</a>
-  </div><!-- /header -->
-
-  <div data-role="content"> 
-  <h1>Cheeky Venues</h1>
-  <p>Finding the perfect venues for those quiet drinks is </p>
-
-  
-  </div>
-
-<div data-role="footer" data-position="fixed">
-    <div data-role="navbar">
-      <ul>
-        <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
-        <li><a href="#activities" data-icon="refresh" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" class="ui-btn-active ui-state-persist">Venues</a></li>
-        <li><a href="#accomodation" data-icon="check" data-transition="flip" data-inline="true">Accommodation</a></li>
-        <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
-      </ul>
-    </div>
-  </div>
-  
-  </div>
   
 <div data-role="page" id="accomodation">
 <div data-role="header" data-position="fixed">
@@ -860,50 +912,87 @@
   
   <div class="section group">
 	<div class="col span_3_of_9">
-    	<a href="#thebeachhouse1" data-transition="flow" data-inline="true"><img src="images/accom/1/1.jpg" class="center" alt=""></a>
-        Go supersize with this amazing seafront house! Thirteen bedrooms, eleven bathrooms, two kitchens, two living rooms, a large dining room...sleeps 33 and no sofa beds or bunks. This is just like having your very own private hotel with sea views and close to nightlife!
+    <article class="caption">
+    	<a href="#thebeachhouse1" data-transition="flow" data-inline="true"><img src="images/accom/1/main.gif" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">The Beach House</h2>
+        <p class="caption__overlay__content">Luxurious supersized beach house on the Seafront of Brighton.<br>From just £1650 for the weekend!</p>
+    </div></a>
+</article>
+       <p>Go supersize with this amazing seafront house! Thirteen bedrooms, eleven bathrooms, two kitchens, two living rooms, a large dining room...sleeps 33 and no sofa beds or bunks. This is just like having your very own private hotel with sea views and close to nightlife!</p>
     </div>
     
-    <div class="col span_3_of_9">
-     <a href="#casablanca" data-transition="flow" data-inline="true"><img src="images/accom/2/2.jpg" class="center" alt=""></a>
-     "Play it again Sam!" This super spacious, beautifully designed townhouse is offered to you by lovely landlord, Sam. Interior designed with a subtle, classic theme of film noir, this house has an elegant. boutique style feel. Beautiful bedrooms, dressing tables and bathrooms galore and plenty of space in the large kitchen/diner and separate double length living room. The icing upon all of this is its central location close to Brighton Pier and Brighton Wheel.
+    <div class="col span_3_of_9"><article class="caption">
+     <a href="#casablanca" data-transition="flow" data-inline="true"><img src="images/accom/2/main.gif" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">Casa Blanca</h2>
+        <p class="caption__overlay__content">A spacious townhouse combining elegance and boutique.<br>From just £1400 for the weekend!</p>
+    </div></a>
+</article>
+     <p>"Play it again Sam!" This super spacious, beautifully designed townhouse is offered to you by lovely landlord, Sam. Interior designed with a subtle, classic theme of film noir, this house has an elegant. boutique style feel. Beautiful bedrooms, dressing tables and bathrooms galore and plenty of space in the large kitchen/diner and separate double length living room. The icing upon all of this is its central location close to Brighton Pier and Brighton Wheel.</p>
     </div>
     
-    <div class="col span_3_of_9">
-    	<a href="#pavilionhouse" data-transition="flow" data-inline="true"><img src="images/accom/3/3.jpg" class="center" alt=""></a>
-     A fantastic house for extra large groups. The location is perfect..just opposite the Royal Pavilion; cross the road and you are in the heart of The Lanes. The property is actually a house and a separate lower ground floor apartment so in total there are five bedrooms, four bathrooms, two lounges and two kitchens! This property is unique in its size and location and offers exceptional value!
+    <div class="col span_3_of_9"><article class="caption">
+    	<a href="#pavilionhouse" data-transition="flow" data-inline="true"><img src="images/accom/3/main.gif" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">Pavilion House</h2>
+        <p class="caption__overlay__content">Opposite the Royal Pavilion of Brighton stands this house for the larger groups. <br>From just £1250 for the weekend!</p>
+    </div></a>
+</article>
+     <p>A fantastic house for extra large groups. The location is perfect..just opposite the Royal Pavilion; cross the road and you are in the heart of The Lanes. The property is actually a house and a separate lower ground floor apartment so in total there are five bedrooms, four bathrooms, two lounges and two kitchens! This property is unique in its size and location and offers exceptional value!</p>
     </div>
    </div>
    <div class="section group">
-    <div class="col span_3_of_9">
-    	<a href="#gatsbyhouse" data-transition="flow" data-inline="true"><img src="images/accom/4/4.jpg" class="center" alt=""></a>
-     A stunning six bedroom, Grade II listed Regency townhouse – just 50 metres from the Palace Pier and the Brighton Wheel. Inspired by "The Great Gatsby" novel, this house is incredibly stylish- from the dining area (which seats 22) to the gorgeous 3-seater dressing tables. Getting ready for a night out? There's a bathroom, an en-suite, 2 shower rooms and an additional loo. In terms of location and style this house offers fantastic value!
+    <div class="col span_3_of_9"><article class="caption">
+    	<a href="#gatsbyhouse" data-transition="flow" data-inline="true"><img src="images/accom/4/main.gif" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">Gatsby House</h2>
+        <p class="caption__overlay__content">One of our favourites - this six bedroom townhouse is the perfect retreat!<br>From just £1100 for the weekend!</p>
+    </div></a>
+</article>
+     <p>A stunning six bedroom, Grade II listed Regency townhouse – just 50 metres from the Palace Pier and the Brighton Wheel. Inspired by "The Great Gatsby" novel, this house is incredibly stylish- from the dining area (which seats 22) to the gorgeous 3-seater dressing tables. Getting ready for a night out? There's a bathroom, an en-suite, 2 shower rooms and an additional loo. In terms of location and style this house offers fantastic value!</p>
     </div>
     
-    <div class="col span_3_of_9">
-    	<a href="#beachboutique2" data-transition="flow" data-inline="true"><img src="images/accom/5/5.jpg" class="center" alt=""></a>
-     Beach Boutique 2 has been designed with groups in mind. A super stylish central property with three huge bedrooms and three bathrooms, all beautifully styled and practical for you, your friends and extended family. Right in the heart of Brighton and close to a popular pub, but with more nightlife and restaurants all around. The beach is just at the end of the road too. Televisions in every room, Wi-Fi, gorgeous bathrooms and decor make this an excellent choice.
+    <div class="col span_3_of_9"><article class="caption">
+    	<a href="#beachboutique2" data-transition="flow" data-inline="true"><img src="images/accom/5/main.gif" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">Beach Boutique 2</h2>
+        <p class="caption__overlay__content">A purpose built property to house the groups of tourists to Brighton!<br>From just £1000 for the weekend!</p>
+    </div></a>
+</article>
+     <p>Beach Boutique 2 has been designed with groups in mind. A super stylish central property with three huge bedrooms and three bathrooms, all beautifully styled and practical for you, your friends and extended family. Right in the heart of Brighton and close to a popular pub, but with more nightlife and restaurants all around. The beach is just at the end of the road too. Televisions in every room, Wi-Fi, gorgeous bathrooms and decor make this an excellent choice.</p>
     </div>
     
-    <div class="col span_3_of_9">
-    	<a href="#beachboutique1" data-transition="flow" data-inline="true"><img src="images/accom/6/6.jpg" class="center" alt=""></a>
-     Location! Location! Location! This totally gorgeous property is bang in the heart of Brighton! Perfect for a group of friends who want to be in the heart of the city and it's just like having your very own boutique hotel. Close to nightlife, restaurants and shops and the beach is just at the end of the road. The house is very spacious and has been refurbished to a high standard with wall mounted LCD televisions in the bedrooms and a funky modern colour scheme throughout.
+    <div class="col span_3_of_9"><article class="caption">
+    	<a href="#beachboutique1" data-transition="flow" data-inline="true"><img src="images/accom/6/main.gif" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">Beach Boutique</h2>
+        <p class="caption__overlay__content">One of our more central properties - perfect for groups who want everything within walking distance!<br>From just £1000 for the weekend!</p>
+    </div></a>
+</article>
+     <p>Location! Location! Location! This totally gorgeous property is bang in the heart of Brighton! Perfect for a group of friends who want to be in the heart of the city and it's just like having your very own boutique hotel. Close to nightlife, restaurants and shops and the beach is just at the end of the road. The house is very spacious and has been refurbished to a high standard with wall mounted LCD televisions in the bedrooms and a funky modern colour scheme throughout.</p>
     </div>
    </div>
    <div class="section group">    
-    <div class="col span_3_of_9" data-transition="flow" data-inline="true">
-    	<a href="#middlestreet"><img src="images/accom/7/7.jpg" class="center" alt=""></a>
-     An incredibly spacious and beautifully styled, period town house in central Brighton that can comfortably accommodate large groups. This is in a perfect location for enjoying everything Brighton has to offer. Close by there are numerous restaurants and cafes, plus fashionable bars, clubs and the beach. The Victorian house is very well equipped, fitted to a high standard with quality fixtures and fittings with gorgeous wooden shutters on the windows and oak floors. A huge dining table seats twenty and there's even a sauna...
+    <div class="col span_3_of_9"><article class="caption">
+    	<a href="#middlestreet" data-transition="flow" data-inline="true"><img src="images/accom/7/main.gif" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">Middle Street</h2>
+        <p class="caption__overlay__content">Space and style combine to make this the perfect retreat for large groups. This has an air of sophistication for a small price tag.<br>From just £1000 for the weekend!</p>
+    </div></a>
+</article>
+     <p>An incredibly spacious and beautifully styled, period town house in central Brighton that can comfortably accommodate large groups. This is in a perfect location for enjoying everything Brighton has to offer. Close by there are numerous restaurants and cafes, plus fashionable bars, clubs and the beach. The Victorian house is very well equipped, fitted to a high standard with quality fixtures and fittings with gorgeous wooden shutters on the windows and oak floors. A huge dining table seats twenty and there's even a sauna...</p>
     </div>
     
-    <div class="col span_3_of_9">
-    	<a href="#sealanes1" data-transition="flow" data-inline="true"><img src="images/accom/8/8.jpg" class="center" alt=""></a>
-     Sea Lanes 1 apartment is ideal if you're bringing a group of friends and extended family to Brighton for the weekend! Right on the sea front and in central Brighton, everything Brighton has to offer is within walking distance all around. The beach is just opposite too so very handy for a spot of sunbathing in the summer! There are five bedrooms, three bathrooms ..very practical and stylish too.
+    <div class="col span_3_of_9"><article class="caption">
+    	<a href="#sealanes1" data-transition="flow" data-inline="true"><img src="images/accom/8/main.gif" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">Sea Lanes</h2>
+        <p class="caption__overlay__content">Practical and stylish! The perfect choice to keep all of your group happy!<br>From just £950 for the weekend!</p>
+    </div></a>
+</article>
+     <p>Sea Lanes 1 apartment is ideal if you're bringing a group of friends and extended family to Brighton for the weekend! Right on the sea front and in central Brighton, everything Brighton has to offer is within walking distance all around. The beach is just opposite too so very handy for a spot of sunbathing in the summer! There are five bedrooms, three bathrooms ..very practical and stylish too.</p>
     </div>
 
-    <div class="col span_3_of_9">
-    	<a href="#lighthouse" data-transition="flow" data-inline="true"><img src="images/accom/9/9.jpg" class="center" alt=""></a>
-     A fabulous four bedroom apartment with huge bright windows that let light flood in! The location is perfect, in the heart of the fashionable Kemp Town district and just a short walk from Brighton Pier. There are restaurants, tea rooms, pubs and great shops all around and the beach is just at the end of the road. A great choice for a weekend away for a group of friends and extended family.
+    <div class="col span_3_of_9"><article class="caption">
+    	<a href="#lighthouse" data-transition="flow" data-inline="true"><img src="images/accom/9/main.gif" class="center caption_media" alt=""><div class="caption__overlay">
+        <h2 class="caption__overlay__title">The Lighthouse</h2>
+        <p class="caption__overlay__content">Situated in the heart of Kemp Town this is one of our most populart properties.<br>From just £900 for the weekend!</p>
+    </div></a>
+</article>
+     <p>A fabulous four bedroom apartment with huge bright windows that let light flood in! The location is perfect, in the heart of the fashionable Kemp Town district and just a short walk from Brighton Pier. There are restaurants, tea rooms, pubs and great shops all around and the beach is just at the end of the road. A great choice for a weekend away for a group of friends and extended family.</p>
     </div>
   </div>
 
@@ -912,7 +1001,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -959,7 +1048,7 @@
 <a href="#wows1_7" title="The Beach House"><img src="images/accom/1/tooltips/107.jpg" alt="" /></a>
 </div>
 </div>
-<span class="wsl"><a href="http://wowslider.com">jquery slider</a> by WOWSlider.com v5.4</span>
+ 
 	<a href="#" class="ws_frame"></a>
 	<div class="ws_shadow"></div>
 	</div>
@@ -969,7 +1058,7 @@
        <div class="col span_3_of_9 product-content no-padding"><!-- Title. Price. Key points -->
         	<div class="product-info">
                <h3>The Beach House</h3>
-               <span class="price">£1650.00</span>
+               <span class="price"> £1650.00</span>
 			   <div class="rating-box">
 				 <span>17 Review(s)</span>
 			    </div>
@@ -986,22 +1075,20 @@
             <br />
 		</div>
        <div class="full-width"> <!-- full span for description -->
-	   <h2>Supersize beachfront house</h2>
-          <p>Undoubtedly the biggest holiday let in Brighton and Hove in a prime beachfront location with stunning sea views. Thirteen bedrooms, eleven bathrooms and very comfortably accommodating 33 people in spacious bedrooms with no sofa beds or bunks. Two large living rooms, two kitchens, a large decked patio area with sun loungers, a separate games room with a pool table…a perfect property for a Brighton weekend with a larger group of friends!</p><h2>Entrance</h2><p>From the seafront you enter this enormous property. There is a laundry room with two washer/dryers and a dishwasher.</p>
-          <h2>Ground Floor</h2><p>On the ground floor there are two well equipped kitchens. Each kitchen has two electric cookers and a microwave so it’s certainly easy to cook for a large group if you want to. Don’t forget we can provide a chef or a buffet so please ask.<br>There are two spacious and very welcoming living rooms, both have wall mounted LCD televisions with Freeview andDVD players. They have been accessorised to create a real home from home.<br>A dining room has a table to seat 22 very comfortably.<br>Patio doors lead out from the living rooms and the dining room onto a decked terrace with plenty of garden furniture which is perfect for sunbathing. At the front of the property there is a separate cabin which has been made into a games room with a pool table.<br>There is a separate loo on the ground floor and a bathroom adjacent to one of the living rooms.<br>On the ground floor there are 3 bedrooms. There is one twin room at the back of the house, the bathroom for this property is adjacent to the second living room. The second and third bedrooms are also at the back of the property and are interconnected and one has a double bed and one has a twin. This would make an ideal family room. These two bedrooms have a bathroom with a bath and a shower over it and a private kitchenette with a fridge.</p>
-          <h2>First Floor and Second Floor</h2><p>On the first and second floors there are ten bedrooms. Each bedroom has its own private bathroom, with the exception of one twin room which would share a bathroom with the adjacent bedroom. The bathrooms are all modern and have either a bath with a shower over it or a walk in shower. Every bedroom has a wall mounted LCD television and most have a sofa. Perfect for sitting and chatting and watching the tv while you get ready for your night out. Most of the bedrooms have their own small kitchenette area with a fridge which is very handy. Just like your own mini bar in your room!<br>Bedroom 1: two single beds, Bedroom 2: double bed, Bedroom 3: two single beds, Bedroom 4: double & two singles, Bedroom 5: two single beds, Bedroom 6: two single beds, Bedroom 7: double bed & 2 single beds, Bedroom 8: two single beds, Bedroom 9: two single beds, Bedroom 10: double & single bed, Bedroom 11: two single beds, Bedroom 12: double & single bed, Bedroom 13: three single beds</p>
-          <h2>Outside area</h2><p>At the front of the property, on the seafront road, the fully enclosed patio area is private and has patio furniture for you to sit out and enjoy a quiet drink or to sunbathe.<br>The Beach House is on Hove seafront. It is a 5 minute taxi ride into central Brighton or approximately a 20 minute walk along the seafront. There is a nightclub within a minute’s walk from the house and local pubs too.</p><br />
+	   <dl title="Beach House">
+<dt><h2>Supersize beachfront house</h2></dt>
+          <dd><p>Undoubtedly the biggest holiday let in Brighton and Hove in a prime beachfront location with stunning sea views. Thirteen bedrooms, eleven bathrooms and very comfortably accommodating 33 people in spacious bedrooms with no sofa beds or bunks. Two large living rooms, two kitchens, a large decked patio area with sun loungers, a separate games room with a pool table…a perfect property for a Brighton weekend with a larger group of friends!</p></dd>
+		  <dt><h2>Entrance</h2></dt><dd><p>From the seafront you enter this enormous property. There is a laundry room with two washer/dryers and a dishwasher.</p></dd>
+          <dt><h2>Ground Floor</h2></dt><dd><p>On the ground floor there are two well equipped kitchens. Each kitchen has two electric cookers and a microwave so it's certainly easy to cook for a large group if you want to. Don't forget we can provide a chef or a buffet so please ask.<br>There are two spacious and very welcoming living rooms, both have wall mounted LCD televisions with Freeview andDVD players. They have been accessorised to create a real home from home.<br>A dining room has a table to seat 22 very comfortably.<br>Patio doors lead out from the living rooms and the dining room onto a decked terrace with plenty of garden furniture which is perfect for sunbathing. At the front of the property there is a separate cabin which has been made into a games room with a pool table.<br>There is a separate loo on the ground floor and a bathroom adjacent to one of the living rooms.<br>On the ground floor there are 3 bedrooms. There is one twin room at the back of the house, the bathroom for this property is adjacent to the second living room. The second and third bedrooms are also at the back of the property and are interconnected and one has a double bed and one has a twin. This would make an ideal family room. These two bedrooms have a bathroom with a bath and a shower over it and a private kitchenette with a fridge.</p></dd>
+          <dt><h2>First Floor and Second Floor</h2></dt><dd><p>On the first and second floors there are ten bedrooms. Each bedroom has its own private bathroom, with the exception of one twin room which would share a bathroom with the adjacent bedroom. The bathrooms are all modern and have either a bath with a shower over it or a walk in shower. Every bedroom has a wall mounted LCD television and most have a sofa. Perfect for sitting and chatting and watching the tv while you get ready for your night out. Most of the bedrooms have their own small kitchenette area with a fridge which is very handy. Just like your own mini bar in your room!<br>Bedroom 1: two single beds, Bedroom 2: double bed, Bedroom 3: two single beds, Bedroom 4: double & two singles, Bedroom 5: two single beds, Bedroom 6: two single beds, Bedroom 7: double bed & 2 single beds, Bedroom 8: two single beds, Bedroom 9: two single beds, Bedroom 10: double & single bed, Bedroom 11: two single beds, Bedroom 12: double & single bed, Bedroom 13: three single beds</p></dd>
+          <dt><h2>Outside area</h2></dt><dd><p>At the front of the property, on the seafront road, the fully enclosed patio area is private and has patio furniture for you to sit out and enjoy a quiet drink or to sunbathe.<br>The Beach House is on Hove seafront. It is a 5 minute taxi ride into central Brighton or approximately a 20 minute walk along the seafront. There is a nightclub within a minute's walk from the house and local pubs too.</p><br /></dd></dl>
        </div> <br> <hr> <br> <!-- end of full point for description -->
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -1013,7 +1100,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -1060,7 +1147,7 @@
 <a href="#wows2_7" title="Casa Blanca"><img src="images/accom/2/tooltips/206.jpg" alt="" /></a>
 </div>
 </div>
-<span class="wsl"><a href="http://wowslider.com">jquery slider</a> by WOWSlider.com v5.4</span>
+ 
 	<a href="#" class="ws_frame"></a>
 	<div class="ws_shadow"></div>
 	</div>
@@ -1070,14 +1157,14 @@
        <div class="col span_3_of_9 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Casa Blanca</h3>
-               <span class="price">£1400.00</span>
+               <span class="price"> £1400.00</span>
 			   <div class="rating-box">
 				 <span>29 Review(s)</span>
 			    </div>
              </div>
      	    <ul><li>All bed linen and towels are provided for all beds including the cube bed.</li>
             <li>All utility costs are included.</li>
-            <li>Parking is not available at the property, however the High Street Car Park (BN2 1RW) is just a short walk away. There is no need for a car while you are here as everything is within walking distance and you won’t even need a taxi home at night as you are in the heart of town.</li>
+            <li>Parking is not available at the property, however the High Street Car Park (BN2 1RW) is just a short walk away. There is no need for a car while you are here as everything is within walking distance and you won't even need a taxi home at night as you are in the heart of town.</li>
             <li>Smoking is not permitted inside the property.</li>
             <li>There is no access to the garden at this property.</li>
             <li>Wi-fi is available</li>
@@ -1090,32 +1177,35 @@
             <br />
             </div>
        <div class="full-width"> <!-- 3 of 5 points for description -->
-       <h2>Stunning townhouse by Brighton Pier</h2>
-          <p>Casa Blanca is a very spacious Regency town house, spanning five floors and offers a very stylish and comfortable place to stay. With the Pier and beach a few metres away in one direction, and a supermarket, shops and cafes at the other end of the road..the location is ideal. Close to nightlife and easy to walk home to after an evening out in Brighton. Key features are a huge dining table, separate double length lounge, five beautifully interior designed bedrooms, with bespoke boudoir dressing tables that seat three people, and four stunning bathrooms. Casa Blanca offers excellent quality at superb value for money.</p>
-          <h2>Entrance</h2><p>Just a few metres from the seafront road near Brighton Pier and you come to Casa Blanca. Up a few of the original tiled steps to the front entrance.</p>
-          <h2>Living room</h2><p>The double length living room is very spacious and has been decorated in elegant neutral tones. There is real wood parquet flooring and original bi folding doors which means you can have two separate areas if you wish. There is a DVDplayer and flat screen LCD tv and Wi-Fi. Two L shaped double sofa beds and leather cubes make this a very comfortable room to sit and chat and later on it can comfortably accommodate up to 6 people for sleeping. (Please note in the photo the large rug and low level coffee tables are missing…new photo coming soon.)</p>
-          <h2>Kitchen/ Dining room</h2><p>Flowing the entire length of the house this vast room on the lower ground floor has a fully equipped kitchen with a large range cooker, wine cooler, extra large fridge and separate freezer, dishwasher, washing machine and has everything you need to self cater including a microwave. With white walls and a stunning huge white table and benches that can accommodate 26/27 people…28 if you all squeeze in and use the additional stools! A perfect room if you want to have a buffet on Friday night. Don’t forget we can provide all your catering requirements so no need to cook!</p>
-          <h2>Bathrooms</h2><p>In total Casa Blanca has four beautiful and contemporary bathrooms. Just along from the living room on the ground floor is the first bathroom. Spacious and contemporary, it has twin basins and a double length walk in shower. There is an additional shower room on the lower ground floor with a large walk in shower and contemporary basin. On the first floor the first bedroom has a huge en suite fully tiled marble bathroom with large shower and tub bath plus twin basins. On the second floor there is another bathroom, fully tiled in mosaic tiles and with a bath with a shower over it.</p>
-          <h2>Bedrooms</h2>
-          <ul><li>Bedroom 1 has a triple bunk (double on bottom, single on top) and a bunk bed for 2 and a cube bed – sleeps 6 and has a beautiful very large en suite bathroom</li>
+       <dl title="Casa Blanca">
+       <dt><h2>Stunning townhouse by Brighton Pier</h2></dt>
+          <dd><p>Casa Blanca is a very spacious Regency town house, spanning five floors and offers a very stylish and comfortable place to stay. With the Pier and beach a few metres away in one direction, and a supermarket, shops and cafes at the other end of the road..the location is ideal. Close to nightlife and easy to walk home to after an evening out in Brighton. Key features are a huge dining table, separate double length lounge, five beautifully interior designed bedrooms, with bespoke boudoir dressing tables that seat three people, and four stunning bathrooms. Casa Blanca offers excellent quality at superb value for money.</p></dd>
+          <dt><h2>Entrance</h2></dt>
+          <dd><p>Just a few metres from the seafront road near Brighton Pier and you come to Casa Blanca. Up a few of the original tiled steps to the front entrance.</p></dd>
+          <dt><h2>Living room</h2></dt>
+          <dd><p>The double length living room is very spacious and has been decorated in elegant neutral tones. There is real wood parquet flooring and original bi folding doors which means you can have two separate areas if you wish. There is a DVDplayer and flat screen LCD tv and Wi-Fi. Two L shaped double sofa beds and leather cubes make this a very comfortable room to sit and chat and later on it can comfortably accommodate up to 6 people for sleeping. (Please note in the photo the large rug and low level coffee tables are missing…new photo coming soon.)</p></dd>
+          <dt><h2>Kitchen/ Dining room</h2></dt>
+          <dd><p>Flowing the entire length of the house this vast room on the lower ground floor has a fully equipped kitchen with a large range cooker, wine cooler, extra large fridge and separate freezer, dishwasher, washing machine and has everything you need to self cater including a microwave. With white walls and a stunning huge white table and benches that can accommodate 26/27 people…28 if you all squeeze in and use the additional stools! A perfect room if you want to have a buffet on Friday night. Don't forget we can provide all your catering requirements so no need to cook!</p></dd>
+          <dt><h2>Bathrooms</h2></dt>
+          <dd><p>In total Casa Blanca has four beautiful and contemporary bathrooms. Just along from the living room on the ground floor is the first bathroom. Spacious and contemporary, it has twin basins and a double length walk in shower. There is an additional shower room on the lower ground floor with a large walk in shower and contemporary basin. On the first floor the first bedroom has a huge en suite fully tiled marble bathroom with large shower and tub bath plus twin basins. On the second floor there is another bathroom, fully tiled in mosaic tiles and with a bath with a shower over it.</p></dd>
+          <dt><h2>Bedrooms</h2></dt>
+          <dd><ul><li>Bedroom 1 has a triple bunk (double on bottom, single on top) and a bunk bed for 2 and a cube bed – sleeps 6 and has a beautiful very large en suite bathroom</li>
           <li>This room has Bedroom 2 has a triple bunk – sleeps 3. There is an additional bathroom on this level with a bath with a shower over it. </li>
           <li>Bedroom 3 has two triple bunk beds and a cube – sleeps 7. </li>
           <li>Bedroom 4 has a double bed – sleeps 2. </li>
           <li>Bedroom 5 has two singles and a double bed – sleeps 4. </li>
           <li>The very large double length lounge has two sofa beds and 2 cube beds – sleeps 6. A bathroom is on this level.</li>
-          </ul>
-          <p>All bunk beds are excellent quality white, wooden adult size bunks.<br>Each bedroom has been styled with attention to detail with dressing tables and mirrors galore. Three of the bedrooms have bespoke dressing tables to seat three people…so no fighting over the mirrors when you’re getting ready to go out!</p><br />
+          </ul></dd>
+          <dd><p>All bunk beds are excellent quality white, wooden adult size bunks.<br>Each bedroom has been styled with attention to detail with dressing tables and mirrors galore. Three of the bedrooms have bespoke dressing tables to seat three people…so no fighting over the mirrors when you're getting ready to go out!</p></dd>
+          </dl>
+          <br />
        </div><hr><br> <!-- end of description 3 pt -->
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -1127,7 +1217,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -1174,7 +1264,7 @@
 <a href="#wows3_7" title="Pavilion House"><img src="images/accom/3/tooltips/307.jpg" alt="" /></a>
 </div>
 </div>
-<span class="wsl"><a href="http://wowslider.com">jquery slider</a> by WOWSlider.com v5.4</span>
+ 
 	<a href="#" class="ws_frame"></a>
 	<div class="ws_shadow"></div>
 	</div>            
@@ -1183,7 +1273,7 @@
        <div class="col span_3_of_9 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Pavillion House</h3>
-               <span class="price">£1250.00</span>
+               <span class="price"> £1250.00</span>
 			   <div class="rating-box">
 				 <span>13 Review(s)</span>
 			    </div>
@@ -1200,28 +1290,32 @@
             <br />
             </div>
        <div class="full-width"> <!-- 3 of 5 points for description -->
-       <h2>Extra large, central Regency house.</h2>
-          <p>Pavilion House has the space to accommodate 25 people but it is also right in the heart of the town making it a very practical choice for larger groups. Decorated throughout with Farrow and Ball paint, the owners have taken great care to create a stylish and practical home from home for larger groups.<br>In the main house there are four bedrooms. Each bedroom has three single beds and a cube bed. The lounge of the main house has two sofa beds that can accommodate four people. The lower ground floor apartment has a bedroom with two beds and a cube bed. The lounge has a sofa bed that can accommodate two.<br>Please note the photo of Brighton Pavilion is Brighton Pavilion! It is not the actual house you will be staying in! Brighton Pavilion is opposite Pavilion House so this photo is to show its location…just in case anyone got confused for a minute there. It was originally a Brighton holiday home belonging to Prince Regent but it is not available for self catering accommodation at the moment!</p>
-          <h2>The Main House</h2><p>The house is an elegant Regency property and has high ceilings and huge sash windows. The main house has four bedrooms and three bathrooms, a lounge, a kitchen/diner and a utility room. It has been decorated in calm neutral Farrow and Ball paint. Each bedroom has been colour co-ordinated to create a pretty and practical place to stay. The entrance is approached via a few steps. The hallway has lots of space for shoes and has a stylish grey striped carpet. The bedrooms and lounge all have plush grey carpeting. Under the stairs there is more space to store luggage, coats and shoes.</p>
-          <h2>Ground Floor</h2>
-          <h2>The Lounge</h2><p>The lounge has a large LCD tv and dvd player and there are two large sofa beds and an armchair. There is additional seating in the window.</p>
-          <h2>The Kitchen/ Diner</h2><p>The pretty kitchen/diner has been decorated in a Cath Kidston style with beautiful cream units, a butler sink, oak worktops and a slate floor.There is a large oak dining table and benches that can seat 10 (12 if you put two each end). There is a very pretty seating area in the window with another two chairs and co-ordinated cushions. There is an additional pull out butterfly table so another four can sit to eat if required. Please note you wouldn’t be able to seat 25 people here but if you had a smaller number on one night you could probably accommodate 16 or so for a meal. There is a fridge/freezer, dishwasher and electric cooker, microwave etc. There is an additional utility room which has a washing machine and a place to iron your clothes before you get ready for your night out in Brighton!</p>
-          <h2>Shower room</h2><p>On the ground floor there is a also a shower room with a loo and basin; practical for those sleeping on the sofa beds in the lounge.</p>
-          <h2>First Floor</h2><p>On the first floor there are two spacious bedrooms: “The Turquoise Room” and “The Purple Room”. Both have three single beds. Each room also has a pull out cube bed for an additional person. So each bedroom accommodates four people, three in beds and one on a cube bed. Each room has a long horizontal mirror and shelf, so you can all put make up on at the same time..making getting ready easier! There is also a hairdryer in each bedroom.<br>The spacious bathroom on the first floor has a walk in shower.</p>
-          <h2>Second Floor</h2><p>The second floor also has two big bedrooms and a bathroom: “The Red Room” and “The Pink Room”. These are configured in exactly the same way and have three singles beds each and a cube bed. The main bathroom here is very spacious and has a walk in shower cubicle, a gorgeous Victorian roll top bath with a shower attachment for washing your hair, plus his and hers sinks. They’ll be no queuing up to brush your teeth in the morning with all these bathrooms! Outside on the landing there is a good place to store luggage too.</p>
-          <h2>The Lower Ground Floor Flat</h2><p>This apartment is in the lower ground floor of the house and has it’s own entrance. There are no internal stairs from the house to the flat. The apartment has a lounge/kitchen/diner and a bathroom and a bedroom. The kitchen is fully equipped and there is a tv and dvd in the lounge. The bedroom has twin beds. There is also a cube bed for a third person in the bedroom. In the lounge there is a sofa bed for an additional two people. The bathroom has a bath with a shower over it. Please note the stairs down to the lower ground floor apartment are fairly steep so they would not suit someone with mobility problems.</p><br />
+       <dl title="Pavilion House">
+       <dt><h2>Extra large, central Regency house.</h2></dt>
+       <dd><p>Pavilion House has the space to accommodate 25 people but it is also right in the heart of the town making it a very practical choice for larger groups. Decorated throughout with Farrow and Ball paint, the owners have taken great care to create a stylish and practical home from home for larger groups.<br>In the main house there are four bedrooms. Each bedroom has three single beds and a cube bed. The lounge of the main house has two sofa beds that can accommodate four people. The lower ground floor apartment has a bedroom with two beds and a cube bed. The lounge has a sofa bed that can accommodate two.<br>Please note the photo of Brighton Pavilion is Brighton Pavilion! It is not the actual house you will be staying in! Brighton Pavilion is opposite Pavilion House so this photo is to show its location…just in case anyone got confused for a minute there. It was originally a Brighton holiday home belonging to Prince Regent but it is not available for self catering accommodation at the moment!</p></dd>
+       <dt><h2>The Main House</h2></dt>
+       <dd><p>The house is an elegant Regency property and has high ceilings and huge sash windows. The main house has four bedrooms and three bathrooms, a lounge, a kitchen/diner and a utility room. It has been decorated in calm neutral Farrow and Ball paint. Each bedroom has been colour co-ordinated to create a pretty and practical place to stay. The entrance is approached via a few steps. The hallway has lots of space for shoes and has a stylish grey striped carpet. The bedrooms and lounge all have plush grey carpeting. Under the stairs there is more space to store luggage, coats and shoes.</p></dd>
+      
+       <dt><h2>The Lounge</h2></dt>
+       <dd><p>The lounge has a large LCD tv and dvd player and there are two large sofa beds and an armchair. There is additional seating in the window.</p></dd>
+        <dt><h2>The Kitchen/ Diner</h2></dt>
+        <dd><p>The pretty kitchen/diner has been decorated in a Cath Kidston style with beautiful cream units, a butler sink, oak worktops and a slate floor.There is a large oak dining table and benches that can seat 10 (12 if you put two each end). There is a very pretty seating area in the window with another two chairs and co-ordinated cushions. There is an additional pull out butterfly table so another four can sit to eat if required. Please note you wouldn't be able to seat 25 people here but if you had a smaller number on one night you could probably accommodate 16 or so for a meal. There is a fridge/freezer, dishwasher and electric cooker, microwave etc. There is an additional utility room which has a washing machine and a place to iron your clothes before you get ready for your night out in Brighton!</p></dd>
+          <dt><h2>Shower room</h2></dt>
+          <dd><p>On the ground floor there is a also a shower room with a loo and basin; practical for those sleeping on the sofa beds in the lounge.</p></dd>
+          <dt><h2>First Floor</h2></dt>
+          <dd><p>On the first floor there are two spacious bedrooms: “The Turquoise Room” and “The Purple Room”. Both have three single beds. Each room also has a pull out cube bed for an additional person. So each bedroom accommodates four people, three in beds and one on a cube bed. Each room has a long horizontal mirror and shelf, so you can all put make up on at the same time..making getting ready easier! There is also a hairdryer in each bedroom.<br>The spacious bathroom on the first floor has a walk in shower.</p></dd>
+          <dt><h2>Second Floor</h2></dt>
+          <dd><p>The second floor also has two big bedrooms and a bathroom: “The Red Room” and “The Pink Room”. These are configured in exactly the same way and have three singles beds each and a cube bed. The main bathroom here is very spacious and has a walk in shower cubicle, a gorgeous Victorian roll top bath with a shower attachment for washing your hair, plus his and hers sinks. They'll be no queuing up to brush your teeth in the morning with all these bathrooms! Outside on the landing there is a good place to store luggage too.</p></dd>
+          <dt><h2>The Lower Ground Floor Flat</h2></dt>
+          <dd><p>This apartment is in the lower ground floor of the house and has it's own entrance. There are no internal stairs from the house to the flat. The apartment has a lounge/kitchen/diner and a bathroom and a bedroom. The kitchen is fully equipped and there is a tv and dvd in the lounge. The bedroom has twin beds. There is also a cube bed for a third person in the bedroom. In the lounge there is a sofa bed for an additional two people. The bathroom has a bath with a shower over it. Please note the stairs down to the lower ground floor apartment are fairly steep so they would not suit someone with mobility problems.</p></dd></dl><br />
        </div> <!-- end of description 3 pt --><hr><br>
 
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -1233,7 +1327,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -1280,7 +1374,7 @@
 <a href="#wows4_7" title="Gatsby House"><img src="images/accom/4/tooltips/408.jpg" alt="" /></a>
 </div>
 </div>
-<span class="wsl"><a href="http://wowslider.com">jquery slider</a> by WOWSlider.com v5.4</span>
+ 
 	<a href="#" class="ws_frame"></a>
 	<div class="ws_shadow"></div>
 	</div>
@@ -1291,14 +1385,14 @@
        <div class="col span_3_of_9 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Gatsby House</h3>
-               <span class="price">£1100.00</span>
+               <span class="price"> £1100.00</span>
 			   <div class="rating-box">
 				 <span>58 Review(s)</span>
 			    </div>
              </div>
              <ul><li>All bed linen and towels are provided for all beds including the cube bed.</li>
             <li>All utility costs are included.</li>
-            <li>Parking is not available at the property, however the High Street Car Park (BN2 1RW) is just a short walk away. There is no need for a car while you are here as everything is within walking distance and you won’t even need a taxi home at night as you are in the heart of town.</li>
+            <li>Parking is not available at the property, however the High Street Car Park (BN2 1RW) is just a short walk away. There is no need for a car while you are here as everything is within walking distance and you won't even need a taxi home at night as you are in the heart of town.</li>
             <li>Smoking is not permitted inside the property.</li>
             <li>There is no access to the garden at this property.</li>
             <li>Wi-fi is available.</li>
@@ -1311,25 +1405,24 @@
             <br />
              </div>
        <div class="full-width"> <!-- 3 of 5 points for description -->
-       <h2>Period chic in the heart of Brighton</h2>
-          <p>Gatsby House is a very large Regency town house, in one of Brighton’s oldest streets and has a magnificent façade. In a fantastic location, just 50 metres away at the end of the road is the beach, The Brighton Wheel and the Palace Pier. With exquisite interior design throughout – the greatest care has been taken to create a beautiful place to stay in Brighton. There is WiFi in the property too.</p>
-          <h2>Entrance</h2><p>We have installed a handy keypad on the front door, this means you won’t need (and therefore cannot lose) the front door keys!</p>
-          <h2>Kitchen/dining area</h2>
-          <p>The large, fitted kitchen comes equipped with everything you need – a 6 burner hob, dishwasher, washing machine, fridge, freezer – plus De’Longhi microwave, kettle and 2 toasters. The kitchen opens on to the dining area which seats 22 in stylish custom-built booth seating. After dinner, the tables can be folded away to become the perfect area for chatting and watching the wall mounted 42-inch LCD TV and there is a DVD player.</p>
-          <h2>Bedrooms</h2>
-          <p>All 6 bedrooms have been stylishly interior designed to have a distinctive look and feel. All feature Andrew Martin wallpaper and carefully selected furniture and accessories. From chrome animal heads to sheepskin throws, this house mixes traditional and trendy seamlessly. Two of the bedrooms have stunning, extra long dressing tables that seat three. All of the bedrooms come with mirrors, hairdryers and hanging space for clothes. Two of the bedrooms also have oblique sea views.<br>All 6 bedrooms are a good size. Bedroom 1 has 3 single beds and a fold-out cube bed. Bedroom 2 has 2 singles. Bedroom 3 has 3 singles. Bedroom 4 has 2 triple bunks (single on top, double at the bottom). Bedroom 5 has 2 singles and a double bunk. Bedroom 6 has 3 singles. All the beds are hotel standard, zip and link – which means they can be joined together to make doubles. They’re usually set out as singles, but if you need a different arrangement just let us know in advance.</p>
-          <h2>Bathrooms</h2><p>With a bathroom, an en-suite, two shower rooms and an additional loo, you can forget about arguments when it comes to getting ready. The en-suite is fitted with a double sink and there are rainfall showers in two of the shower rooms.</p><br />
+       <dl title="Gatsby House">
+       <dt><h2>Period chic in the heart of Brighton</h2></dt>
+       <dd><p>Gatsby House is a very large Regency town house, in one of Brighton's oldest streets and has a magnificent façade. In a fantastic location, just 50 metres away at the end of the road is the beach, The Brighton Wheel and the Palace Pier. With exquisite interior design throughout – the greatest care has been taken to create a beautiful place to stay in Brighton. There is WiFi in the property too.</p></dd>
+       <dt><h2>Entrance</h2></dt>
+       <dd><p>We have installed a handy keypad on the front door, this means you won't need (and therefore cannot lose) the front door keys!</p></dd>
+       <dt><h2>Kitchen/dining area</h2></dt>
+       <dd><p>The large, fitted kitchen comes equipped with everything you need – a 6 burner hob, dishwasher, washing machine, fridge, freezer – plus De'Longhi microwave, kettle and 2 toasters. The kitchen opens on to the dining area which seats 22 in stylish custom-built booth seating. After dinner, the tables can be folded away to become the perfect area for chatting and watching the wall mounted 42-inch LCD TV and there is a DVD player.</p></dd>
+       <dt><h2>Bedrooms</h2></dt>
+       <dd><p>All 6 bedrooms have been stylishly interior designed to have a distinctive look and feel. All feature Andrew Martin wallpaper and carefully selected furniture and accessories. From chrome animal heads to sheepskin throws, this house mixes traditional and trendy seamlessly. Two of the bedrooms have stunning, extra long dressing tables that seat three. All of the bedrooms come with mirrors, hairdryers and hanging space for clothes. Two of the bedrooms also have oblique sea views.<br>All 6 bedrooms are a good size. Bedroom 1 has 3 single beds and a fold-out cube bed. Bedroom 2 has 2 singles. Bedroom 3 has 3 singles. Bedroom 4 has 2 triple bunks (single on top, double at the bottom). Bedroom 5 has 2 singles and a double bunk. Bedroom 6 has 3 singles. All the beds are hotel standard, zip and link – which means they can be joined together to make doubles. They're usually set out as singles, but if you need a different arrangement just let us know in advance.</p></dd>
+       <dt><h2>Bathrooms</h2></dt>
+       <dd><p>With a bathroom, an en-suite, two shower rooms and an additional loo, you can forget about arguments when it comes to getting ready. The en-suite is fitted with a double sink and there are rainfall showers in two of the shower rooms.</p></dd></dl><br />
        </div> <hr><br><!-- end of description 3 pt -->
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -1341,7 +1434,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -1388,7 +1481,7 @@
 <a href="#wows5_7" title="Beach Boutique 2"><img src="images/accom/5/tooltips/507.jpg" alt="" /></a>
 </div>
 </div>
-<span class="wsl"><a href="http://wowslider.com">jquery slider</a> by WOWSlider.com v5.4</span>
+ 
 	<a href="#" class="ws_frame"></a>
 	<div class="ws_shadow"></div>
 	</div>           
@@ -1399,14 +1492,14 @@
        <div class="col span_3_of_9 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Beach Boutique 2</h3>
-               <span class="price">£1000.00</span>
+               <span class="price"> £1000.00</span>
 			   <div class="rating-box">
 				 <span>30 Review(s)</span>
 			    </div>
              </div>
              <ul><li>All bed linen and towels are provided for all beds and the occasional beds.</li>
             <li>All utility costs are included and there is Wi-fi.</li>
-            <li>Parking is not available with the property. Regency Square NCP car park is not far away. There is no need for a car while you are here as everything is within walking distance and you won’t even need a taxi home at night as you are in the heart of town. We recommend people come to Brighton by public transport where possible.</li>
+            <li>Parking is not available with the property. Regency Square NCP car park is not far away. There is no need for a car while you are here as everything is within walking distance and you won't even need a taxi home at night as you are in the heart of town. We recommend people come to Brighton by public transport where possible.</li>
             <li>As with all our properties smoking is not permitted inside the property. Please note the only place to smoke is the gated passage way at the side of the property which leads down steps round to the lower ground floor.</li>
             <li>Sleeps 20</li>
             <li>14 Single Beds</li>
@@ -1416,22 +1509,22 @@
             <br />
              </div>
        <div class="full-width"> <!-- 3 of 5 points for description -->
-       <h2>Boutique style central house</h2>
-          <p>Beach Boutique 2 is situated right in the heart of Brighton with all its nightlife, shops restaurants and cafes just nearby, and the beach just at the end of the road too. The house has been completely refurbished and decorated with groups in mind to make it a very stylish and practical home from home for you to enjoy with your friends and extended family. In a boutique style with bright colours, funky accessories, gorgeous bathrooms and high quality fittings this is an excellent choice.</p>
-          <h2>Ground floor</h2><p>Through the front door and you enter the living room with it’s brightly coloured walls and matching accessories. There are three white leather sofa beds, a wall mounted 42inchLCD tv and WiFi. The living rooms leads to a kitchen/dining area. The kitchen has everything you need to self cater and is fully equipped. There is a dishwasher and a fridge and separate freezer. Two butterfly tables can be extended out with eight chairs to provide dining space or great for a buffet!<br>On the ground floor a door leads to an outside passage way where smoking is permitted.</p>
-          <h2>Bedrooms</h2><p>There are three very large bedrooms. On the first floor there is a stunning green bedroom which has 4 single beds. As with all the bedrooms there is a wall mounted 42 inch LCDtv, hanging rails, bedside tables and an area with a large mirror, occasional chair and hairdryer so getting ready for a night out isn’t a problem. Next to the green bedroom is a beautiful fully tiled bathroom with a bath and a shower over it. Again there are lots of mirrors for getting ready! On the second floor the red bedroom also has a wow factor. A double height ceiling, gorgeous hanging lights, 5 single beds, hanging rails, bedside tables, a wall mounted tv and another dressing area with a mirror, hairdryer and occasional chair. A beautifully fitted shower room is next to this bedroom.On the lower ground floor is a double size bedroom which is the pink room. There are 5 single beds, wall mounted tv, hanging rails, bedside tables and a dressing area with an occasional chair, large mirror and hairdryer. A wet room with a shower is next to this bedroom. From this bedroom there is access to an additional small outside passage where smoking is permitted.</p>
-          <h2>Bathrooms</h2><p>There are three bathrooms. One has a bath with a shower over it, one has a gorgeous double width shower and one is a wet room.</p><br />
+       <dl title="Beach Boutique 2">
+       <dt><h2>Boutique style central house</h2></dt>
+          <dd><p>Beach Boutique 2 is situated right in the heart of Brighton with all its nightlife, shops restaurants and cafes just nearby, and the beach just at the end of the road too. The house has been completely refurbished and decorated with groups in mind to make it a very stylish and practical home from home for you to enjoy with your friends and extended family. In a boutique style with bright colours, funky accessories, gorgeous bathrooms and high quality fittings this is an excellent choice.</p></dd>
+          <dt><h2>Ground floor</h2></dt>
+          <dd><p>Through the front door and you enter the living room with it's brightly coloured walls and matching accessories. There are three white leather sofa beds, a wall mounted 42inchLCD tv and WiFi. The living rooms leads to a kitchen/dining area. The kitchen has everything you need to self cater and is fully equipped. There is a dishwasher and a fridge and separate freezer. Two butterfly tables can be extended out with eight chairs to provide dining space or great for a buffet!<br>On the ground floor a door leads to an outside passage way where smoking is permitted.</p></dd>
+          <dt><h2>Bedrooms</h2></dt>
+          <dd><p>There are three very large bedrooms. On the first floor there is a stunning green bedroom which has 4 single beds. As with all the bedrooms there is a wall mounted 42 inch LCDtv, hanging rails, bedside tables and an area with a large mirror, occasional chair and hairdryer so getting ready for a night out isn't a problem. Next to the green bedroom is a beautiful fully tiled bathroom with a bath and a shower over it. Again there are lots of mirrors for getting ready! On the second floor the red bedroom also has a wow factor. A double height ceiling, gorgeous hanging lights, 5 single beds, hanging rails, bedside tables, a wall mounted tv and another dressing area with a mirror, hairdryer and occasional chair. A beautifully fitted shower room is next to this bedroom.On the lower ground floor is a double size bedroom which is the pink room. There are 5 single beds, wall mounted tv, hanging rails, bedside tables and a dressing area with an occasional chair, large mirror and hairdryer. A wet room with a shower is next to this bedroom. From this bedroom there is access to an additional small outside passage where smoking is permitted.</p></dd>
+          <dt><h2>Bathrooms</h2></dt>
+          <dd><p>There are three bathrooms. One has a bath with a shower over it, one has a gorgeous double width shower and one is a wet room.</p></dd></dl><br />
        </div> <hr><br><!-- end of description 3 pt -->
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -1443,7 +1536,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -1490,7 +1583,7 @@
 <a href="#wows6_7" title="Beach Boutique"><img src="images/accom/6/tooltips/608.jpg" alt="" /></a>
 </div>
 </div>
-<span class="wsl"><a href="http://wowslider.com">jquery slider</a> by WOWSlider.com v5.4</span>
+ 
 	<a href="#" class="ws_frame"></a>
 	<div class="ws_shadow"></div>
 	</div>            
@@ -1500,7 +1593,7 @@
        <div class="col span_3_of_9 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Beach Boutique</h3>
-               <span class="price">£1000.00</span>
+               <span class="price"> £1000.00</span>
 			   <div class="rating-box">
 				 <span>13 Review(s)</span>
 			    </div>
@@ -1518,24 +1611,25 @@
             <br />
             </div>
        <div class="full-width"> <!-- 3 of 5 points for description -->
-       <h2>Funky boutique house</h2>
-          <p>A perfect central Brighton location for an easy weekend of fun with your friends! Close to nightlife and all Brighton’s attractions, this funky boutique style house is ideal for a groups. Beautifully finished and spacious, the house has been decorated and furnished to a high standard. In the heart of central Brighton so no need to worry about how to get home after a night out! The beach is a couple of hundred metres away at the end of the road and there are millions, (well, okay not quite millions, but seriously there’s loads!), of restaurants, cafes, bars and pubs all around you and nightclubs are a short walk away. Shopping is just at the top of the road. It doesn’t get easier than this and it’s just like having your own boutique hotel!</p>
-          <h2>Entrance</h2><p>From the street you come straight into the very spacious open plan reception room which is decorated in funky colours and is a perfect place to chat with your friends.</p>
-          <h2>Sitting Room / Kitchen</h2><p>The sitting room is a very large area with a wall mountedLCD tv with Freeview and a dvd player. There are three very stylish sofa beds in white leather, plus cube seats. The kitchen has everything you need to self cater but there are restaurants, cafes and places to eat all around, so you may never need to use the kitchen! There is a dishwasher, microwave, fridge/freezer, built in oven and hob. Behind the kitchen is a contemporary shower room with walk in shower. Please note there isn’t a dining table at this property but it’s still easy to have a buffet delivered or just eat out at one of the nearby restaurants. There’s a great choice for all budgets.There is Wi-Fi.</p>
-          <h2>The Bedrooms</h2><p>All the gorgeous boutique style bedrooms are on the first and second floor and they’re all very stylishly decorated and accessorised. There are three extra large bedrooms, each sleep four people very comfortably and have LCD tvs, mirrors and wardrobes or hanging space. There are hairdryers and mirrors. There is one smaller bedroom with two single beds.</p>
-          <h2>The Bathrooms</h2><p>There are three contemporary bathrooms. Two are shower rooms with walk in showers and one has a bath with a rainfall shower over it.</p><br />
+       <dl title="Beach Boutique">
+       <dt><h2>Funky boutique house</h2></dt>
+       <dd><p>A perfect central Brighton location for an easy weekend of fun with your friends! Close to nightlife and all Brighton's attractions, this funky boutique style house is ideal for a groups. Beautifully finished and spacious, the house has been decorated and furnished to a high standard. In the heart of central Brighton so no need to worry about how to get home after a night out! The beach is a couple of hundred metres away at the end of the road and there are millions, (well, okay not quite millions, but seriously there's loads!), of restaurants, cafes, bars and pubs all around you and nightclubs are a short walk away. Shopping is just at the top of the road. It doesn't get easier than this and it's just like having your own boutique hotel!</p></dd>
+       <dt><h2>Entrance</h2></dt>
+       <dd><p>From the street you come straight into the very spacious open plan reception room which is decorated in funky colours and is a perfect place to chat with your friends.</p></dd>
+       <dt><h2>Sitting Room / Kitchen</h2></dt>
+       <dd><p>The sitting room is a very large area with a wall mountedLCD tv with Freeview and a dvd player. There are three very stylish sofa beds in white leather, plus cube seats. The kitchen has everything you need to self cater but there are restaurants, cafes and places to eat all around, so you may never need to use the kitchen! There is a dishwasher, microwave, fridge/freezer, built in oven and hob. Behind the kitchen is a contemporary shower room with walk in shower. Please note there isn't a dining table at this property but it's still easy to have a buffet delivered or just eat out at one of the nearby restaurants. There's a great choice for all budgets.There is Wi-Fi.</p></dd>
+       <dt><h2>The Bedrooms</h2></dt>
+       <dd><p>All the gorgeous boutique style bedrooms are on the first and second floor and they're all very stylishly decorated and accessorised. There are three extra large bedrooms, each sleep four people very comfortably and have LCD tvs, mirrors and wardrobes or hanging space. There are hairdryers and mirrors. There is one smaller bedroom with two single beds.</p></dd>
+       <dt><h2>The Bathrooms</h2></dt>
+       <dd><p>There are three contemporary bathrooms. Two are shower rooms with walk in showers and one has a bath with a rainfall shower over it.</p></dd></dl><br />
        </div> <hr><br><!-- end of description 3 pt -->
 
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -1547,7 +1641,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -1594,7 +1688,7 @@
 <a href="#wows7_7" title="Middle Street"><img src="images/accom/7/tooltips/708.jpg" alt="" /></a>
 </div>
 </div>
-<span class="wsl"><a href="http://wowslider.com">jquery slider</a> by WOWSlider.com v5.4</span>
+ 
 	<a href="#" class="ws_frame"></a>
 	<div class="ws_shadow"></div>
 	</div>
@@ -1604,15 +1698,15 @@
        <div class="col span_3_of_9 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Middle Street</h3>
-               <span class="price">£1000.00</span>
+               <span class="price"> £1000.00</span>
 			   <div class="rating-box">
 				 <span>22 Review(s)</span>
 			    </div>
              </div>
              <ul><li>White cotton bed linen and towels are provided.</li>
-            <li>Parking is not provided with the property but you can park at a nearby NCP car park. Everything is within easy walking distance as it’s right in the centre of town so we recommend people come to Brighton using public transport where possible.</li>
+            <li>Parking is not provided with the property but you can park at a nearby NCP car park. Everything is within easy walking distance as it's right in the centre of town so we recommend people come to Brighton using public transport where possible.</li>
             <li>There is broadband.</li>
-            <li>If the sauna breaks down we cannot offer a refund or promise to be able to repair it during your stay as it requires a specialist repair man. (It hasn’t ever broken yet.. but just in case, so please read our terms and conditions page carefully.)</li>
+            <li>If the sauna breaks down we cannot offer a refund or promise to be able to repair it during your stay as it requires a specialist repair man. (It hasn't ever broken yet.. but just in case, so please read our terms and conditions page carefully.)</li>
             <li>Sleeps 20</li>
             <li>2 Double Beds</li>
             <li>2 Single Beds</li>
@@ -1623,36 +1717,43 @@
             <br />
              </div>
        <div class="full-width"> <!-- 3 of 5 points for description -->
-       <h2>Stunning, central extra large house</h2>
-          <p>Not only a very practical house for a group of friends and family, but also beautifully styled and with everything you need in a home from home. An extra large house set over five floors offering lots of space and in an ideal location if you want to be in the heart of Brighton and close to the beach. The house even has a sauna!<br>The heart of the home is the kitchen/ dining room which is a huge room with a massive dining table with lots of benches so everyone can sit down together. It offers a great space to socialise and chat. From the kitchen/dining room large French doors extend the room out onto an enclosed patio area.</p>
-          <h2>Ground floor</h2>
-          <h2>Hallway</h2><p>An elegant hallway with an original tiled floor offering plenty of space for coats and shoes.</p>
-          <h2>Kitchen/Diner</h2><p>A fantastic open plan kitchen/ dining room with room to chat and cook with friends. This room has recently been completely refitted and it’s a very stylish and spacious room.There’s a five ring gas cooker, dishwasher, fridge, freezer and everything you could possibly need to self cater. A large dining table with benches makes it the perfect place to chat and you can sit twenty people round the table. There is an iPod dock, CD player and LCD tv with freeview, even a computer so you can check what’s on in Brighton really easily! Doors lead out to a little patio area, perfect if any of your group smoke.</p>
-          <h2>Utility area</h2><p>There is a utility area with a tumble dryer. (Please note there is not a washing machine at this property.)</p>
-          <h2>Wet room</h2><p>Leading off from the utility area is a very useful additional wet room. This has mosaic tiling throughout and has a rainfall shower.</p>
-          <h2>Patio</h2><p>From the kitchen there is a door to a patio area where people can sit and chat. This is ideal if there are any smokers in the group.</p>
-          <h2>Lower ground Floor</h2><p>From the kitchen there is a spiral staircase down to a large wetroom area with a shower and a sauna room with disco lighting. You could create your own spa retreat here!* (Please see additional note at the end.)</p>
-          <h2>First Floor</h2>
-          <h2>Family Bathroom</h2><p>On the first floor there is a beautifully decorated Victorian style family bathroom with a roll top bath and a hand held shower attachment.</p>
-          <h2>Bedroom 1</h2><p>This room has a double bed and a single bed. There is also a cube bed that can be moved to any of the bedrooms.</p>
-          <h2>The lounge</h2><p>The lounge is very spacious and has a large LCD tv with freeview and a dvd player. There are three large comfy sofas, plus a good quality wooden, futon style sofa bed. There are two extra cube beds for seating and, if required, they can be moved to any of the bedrooms as additional occasional beds.</p>
-          <h2>Second Floor</h2><p>On the second floor, doors lead out onto a small enclosed terrace with a bench to sit on. Again, another place for any of your group who wish to smoke.</p>
-          <h2>Bedroom 2</h2><p>The second bedroom has two sets of bunk beds and a single bed. A quality cube bed from The Futon Company can easily be moved to anywhere it’s required.</p>
-          <h2>Bedroom 3</h2><p>An extra large room with four sets of bunk beds. Perfect for a group of friends who want to re-create sleep over days and pyjama parties! Also, perfect if you have lots of children in your family group as they can all sleep together in one room!</p>
-          <h2>Third Floor</h2>
-          <h2>Bedroom 4</h2><p>The penthouse bedroom is beautifully furnished and has a beautiful, wooden king size bed, a plush carpet and an ensuite mosaic tiled shower room with contemporary fittings. Doors open onto a fairly large terracotta roof terrace with views over the rooftops of the city and oblique views to the sea which is a few hundred metres to the right of the property. There is a table and chairs making it an ideal place to relax in the evening sun and enjoy a glass of wine as you get ready for an evening out. The bedroom also has an i-pod dock, LCD tv with freeview and a dvd player. An additional cube bed can be fitted in this room so that three people can be accommodated. There is a shower room ensuite.</p><br />
+       <dl title="Middle Street">
+       <dt><h2>Stunning, central extra large house</h2></dt>
+       <dd><p>Not only a very practical house for a group of friends and family, but also beautifully styled and with everything you need in a home from home. An extra large house set over five floors offering lots of space and in an ideal location if you want to be in the heart of Brighton and close to the beach. The house even has a sauna!<br>The heart of the home is the kitchen/ dining room which is a huge room with a massive dining table with lots of benches so everyone can sit down together. It offers a great space to socialise and chat. From the kitchen/dining room large French doors extend the room out onto an enclosed patio area.</p></dd>
+       <dt><h2>Hallway</h2></dt>
+       <dd><p>An elegant hallway with an original tiled floor offering plenty of space for coats and shoes.</p></dd>
+       <dt><h2>Kitchen/Diner</h2></dt>
+       <dd><p>A fantastic open plan kitchen/ dining room with room to chat and cook with friends. This room has recently been completely refitted and it's a very stylish and spacious room.There's a five ring gas cooker, dishwasher, fridge, freezer and everything you could possibly need to self cater. A large dining table with benches makes it the perfect place to chat and you can sit twenty people round the table. There is an iPod dock, CD player and LCD tv with freeview, even a computer so you can check what's on in Brighton really easily! Doors lead out to a little patio area, perfect if any of your group smoke.</p></dd>
+       <dt><h2>Utility area</h2></dt>
+       <dd><p>There is a utility area with a tumble dryer. (Please note there is not a washing machine at this property.)</p></dd>
+       <dt><h2>Wet room</h2></dt>
+       <dd><p>Leading off from the utility area is a very useful additional wet room. This has mosaic tiling throughout and has a rainfall shower.</p></dd>
+       <dt><h2>Patio</h2></dt>
+       <dd><p>From the kitchen there is a door to a patio area where people can sit and chat. This is ideal if there are any smokers in the group.</p></dd>
+       <dt><h2>Lower ground Floor</h2></dt>
+       <dd><p>From the kitchen there is a spiral staircase down to a large wetroom area with a shower and a sauna room with disco lighting. You could create your own spa retreat here!* (Please see additional note at the end.)</p></dd>
+       <dt><h2>Family Bathroom</h2></dt>
+       <dd><p>On the first floor there is a beautifully decorated Victorian style family bathroom with a roll top bath and a hand held shower attachment.</p></dd>
+       <dt><h2>Bedroom 1</h2></dt>
+       <dd><p>This room has a double bed and a single bed. There is also a cube bed that can be moved to any of the bedrooms.</p></dd>
+       <dt><h2>The lounge</h2></dt>
+       <dd><p>The lounge is very spacious and has a large LCD tv with freeview and a dvd player. There are three large comfy sofas, plus a good quality wooden, futon style sofa bed. There are two extra cube beds for seating and, if required, they can be moved to any of the bedrooms as additional occasional beds.</p></dd>
+       <dt><h2>Second Floor</h2></dt>
+       <dd><p>On the second floor, doors lead out onto a small enclosed terrace with a bench to sit on. Again, another place for any of your group who wish to smoke.</p></dd>
+       <dt><h2>Bedroom 2</h2></dt>
+       <dd><p>The second bedroom has two sets of bunk beds and a single bed. A quality cube bed from The Futon Company can easily be moved to anywhere it's required.</p></dd>
+       <dt><h2>Bedroom 3</h2></dt>
+       <dd><p>An extra large room with four sets of bunk beds. Perfect for a group of friends who want to re-create sleep over days and pyjama parties! Also, perfect if you have lots of children in your family group as they can all sleep together in one room!</p></dd>
+       <dt><h2>Bedroom 4</h2></dt>
+       <dd><p>The penthouse bedroom is beautifully furnished and has a beautiful, wooden king size bed, a plush carpet and an ensuite mosaic tiled shower room with contemporary fittings. Doors open onto a fairly large terracotta roof terrace with views over the rooftops of the city and oblique views to the sea which is a few hundred metres to the right of the property. There is a table and chairs making it an ideal place to relax in the evening sun and enjoy a glass of wine as you get ready for an evening out. The bedroom also has an i-pod dock, LCD tv with freeview and a dvd player. An additional cube bed can be fitted in this room so that three people can be accommodated. There is a shower room ensuite.</p><br /></dd></dl>
        </div> <hr><br><!-- end of description 3 pt -->
 
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -1664,7 +1765,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -1711,7 +1812,7 @@
 <a href="#wows8_7" title="Sea Lanes 1"><img src="images/accom/8/tooltips/808.jpg" alt="" /></a>
 </div>
 </div>
-<span class="wsl"><a href="http://wowslider.com">jquery slider</a> by WOWSlider.com v5.4</span>
+ 
 	<a href="#" class="ws_frame"></a>
 	<div class="ws_shadow"></div>
 	</div>
@@ -1721,7 +1822,7 @@
        <div class="col span_3_of_9 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Sea Lanes 1</h3>
-               <span class="price">£950.00</span>
+               <span class="price"> £950.00</span>
 			   <div class="rating-box">
 				 <span>13 Review(s)</span>
 			    </div>
@@ -1730,7 +1831,7 @@
             <li>All utility bills are included.</li>
             <li>As with all our properties there is strictly no smoking within the property.</li>
             <li>There is free Wi-Fi at the property.</li>
-            <li>There is no parking allocated to the property but everything is so close you really don’t need a car during your stay. We would recommend you travel to Brighton by train but if you need to bring a car there is parking at the Thistle Hotel NCP which is very close or in Regency SquareNCP car park a short walk away.</li>
+            <li>There is no parking allocated to the property but everything is so close you really don't need a car during your stay. We would recommend you travel to Brighton by train but if you need to bring a car there is parking at the Thistle Hotel NCP which is very close or in Regency SquareNCP car park a short walk away.</li>
             <li>Please note there are stairs to access the apartment so it would not be suitable for those who find stairs difficult.</li>
             <li>Sleeps 19</li>
             <li>5 Single Beds</li>
@@ -1740,25 +1841,27 @@
             <br />
             </div>
        <div class="full-width"> <!-- 3 of 5 points for description -->
-       <h2>Central apartment with a sea view</h2>
-          <p>Sea Lanes 1 is in the same building as Sea Lanes 2 which sleeps 12. It is in an ideal location for those in Brighton here for the weekend. It is above a Creperie so it’s perfect for morning coffees and breakfast! The apartment has been fully refurbished and designed with groups in mind and offers a very stylish and practical place to stay. Turn left and you’re in the Lanes which is great for shopping and restaurants, across the road and you have the beach and the Pier, turn right and there are clubs and nightlife within easy walking distance. Five bedrooms, three gorgeous bathrooms, a great chill out lounge and a kitchen/diner make this a really super choice.</p>
-          <h2>Entrance</h2><p>The apartment is accessed by stairs from Ship Street next to Hotel du Vin.</p>
-          <h2>Kitchen/Dining room</h2><p>The kitchen has been fitted with high quality high gloss white units, wooden worktops and funky red splash back tiles. Everything you need to self cater is there including a dishwasher and microwave. On the wall is a 42inch Smart television and there is a large bespoke dining table with café style orange and white chairs and extra stools. A great place to sit and chat or have a meal. There is additional window seating with cushions and a fantastic view straight across to Brighton Pier and the beach./
-          <h2>Bedrooms</h2><p>There are five bedrooms. Bedrooms 1 & 2 & 3 are on the first floor and are open plan to each other. The first has a handmade triple bunk in an alcove. Slightly shorter than an average bunk but still comfortably sleeping three – with a double underneath and a single on top. Through the a large open plan room in two sections. Bedroom 2 has a standard adult triple bunk, a single bed and a cube. Bedroom 3 has a triple bunk and a cube. There is a shower room on this floor. All the bedroom areas have mirrors with theatre style lighting so you can all get ready easily!<br>Bedrooms 4 & 5 up some more stairs. Bedroom 4 has three single beds. There is a gorgeous bathroom on this floor with a free standing bath with a shower attachment. The fifth bedroom has a triple bunk and a single bed with a trundle bed underneath which pulls out. This can be used if preferable to one of the cube beds in bedroom 2 or 3. There is a shower room en suite in this bedroom.</p>
-          <h2>Bathrooms</h2><p>There are three bathrooms. Two are shower rooms and one has a free standing bath with a shower over it. All the bathrooms in the property are beautifully fitted with high quality fittings and are stylish and contemporary.</p>
-          <h2>Chill out lounge</h2><p>Up on the very top floor is a lounge area and another 42in Smart tv.<br>Please note there are lots stairs so it may not be a suitable property if there are any in your group with mobility issues.</p><br />
+       <dl title="Sea Lanes">
+       <dt><h2>Central apartment with a sea view</h2></dt>
+       <dd><p>Sea Lanes 1 is in the same building as Sea Lanes 2 which sleeps 12. It is in an ideal location for those in Brighton here for the weekend. It is above a Creperie so it's perfect for morning coffees and breakfast! The apartment has been fully refurbished and designed with groups in mind and offers a very stylish and practical place to stay. Turn left and you're in the Lanes which is great for shopping and restaurants, across the road and you have the beach and the Pier, turn right and there are clubs and nightlife within easy walking distance. Five bedrooms, three gorgeous bathrooms, a great chill out lounge and a kitchen/diner make this a really super choice.</p></dd>
+       <dt><h2>Entrance</h2></dt>
+       <dd><p>The apartment is accessed by stairs from Ship Street next to Hotel du Vin.</p></dd>
+       <dt><h2>Kitchen/Dining room</h2></dt>
+       <dd><p>The kitchen has been fitted with high quality high gloss white units, wooden worktops and funky red splash back tiles. Everything you need to self cater is there including a dishwasher and microwave. On the wall is a 42inch Smart television and there is a large bespoke dining table with café style orange and white chairs and extra stools. A great place to sit and chat or have a meal. There is additional window seating with cushions and a fantastic view straight across to Brighton Pier and the beach.</p></dd>
+       <dt><h2>Bedrooms</h2></dt>
+       <dd><p>There are five bedrooms. Bedrooms 1 & 2 & 3 are on the first floor and are open plan to each other. The first has a handmade triple bunk in an alcove. Slightly shorter than an average bunk but still comfortably sleeping three – with a double underneath and a single on top. Through the a large open plan room in two sections. Bedroom 2 has a standard adult triple bunk, a single bed and a cube. Bedroom 3 has a triple bunk and a cube. There is a shower room on this floor. All the bedroom areas have mirrors with theatre style lighting so you can all get ready easily!<br>Bedrooms 4 & 5 up some more stairs. Bedroom 4 has three single beds. There is a gorgeous bathroom on this floor with a free standing bath with a shower attachment. The fifth bedroom has a triple bunk and a single bed with a trundle bed underneath which pulls out. This can be used if preferable to one of the cube beds in bedroom 2 or 3. There is a shower room en suite in this bedroom.</p></dd>
+       <dt><h2>Bathrooms</h2></dt>
+       <dd><p>There are three bathrooms. Two are shower rooms and one has a free standing bath with a shower over it. All the bathrooms in the property are beautifully fitted with high quality fittings and are stylish and contemporary.</p></dd>
+       <dt><h2>Chill out lounge</h2></dt>
+       <dd><p>Up on the very top floor is a lounge area and another 42in Smart tv.<br>Please note there are lots stairs so it may not be a suitable property if there are any in your group with mobility issues.</p></dd></dl><br />
        </div><hr><br> <!-- end of description 3 pt -->
 
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -1770,7 +1873,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -1817,7 +1920,7 @@
 <a href="#wows9_7" title="Lighthouse"><img src="images/accom/9/tooltips/908.jpg" alt="" /></a>
 </div>
 </div>
-<span class="wsl"><a href="http://wowslider.com">jquery slider</a> by WOWSlider.com v5.4</span>
+ 
 	<a href="#" class="ws_frame"></a>
 	<div class="ws_shadow"></div>
 	</div>
@@ -1827,7 +1930,7 @@
        <div class="col span_3_of_9 product-content no-padding"><!-- the other 5 points are for the description box -->
         	<div class="product-info">
                <h3>Lighthouse</h3>
-               <span class="price">£900.00</span>
+               <span class="price"> £900.00</span>
 			   <div class="rating-box">
 				 <span>57 Review(s)</span>
 			    </div>
@@ -1837,7 +1940,7 @@
             <li>All utility bills are included.</li>
             <li>As with all our properties there is strictly no smoking within the property.</li>
             <li>There is Wi-fi at the property.</li>
-            <li>There is no parking allocated to the property but everything is so close you really don’t need a car during your stay. You can park outside by meter for two hours or to unload and then parking is just down the side road on the seafront where you can park on the seafront side for 24 hours.</li>
+            <li>There is no parking allocated to the property but everything is so close you really don't need a car during your stay. You can park outside by meter for two hours or to unload and then parking is just down the side road on the seafront where you can park on the seafront side for 24 hours.</li>
             <li>Sleeps 18</li>
             <li>12 Single Beds</li>
             <li>3 Sofa Beds</li>
@@ -1846,24 +1949,26 @@
             <br />
             </div>
        <div class="full-width"> <!-- 3 of 5 points for description -->
-       <h2>Light, spacious Kemp Town pad</h2>
-          <p>This is a really bright and spacious four bedroom property. Most of the rooms have dual or triple aspect huge sash windows so the Lighthouse has been aptly named! The location is very well regarded and has a fantastic array of tea rooms, cafes, antique knick-knack shops, gastro pubs, restaurants and independent food shops and delis. The beach is just at the end of the road and The Palace Pier and town is within walking distance.<br>There are four spacious bedrooms. Bedroom 1 is huge and comfortably has four full size single beds. Bedroom 2 is smaller and has two full size single beds. Bedroom 3 and bedroom 4 each have three full size single beds. In addition there are four cube beds that can be placed anywhere on the floors in these rooms as additional beds if people didn’t want to use the sofa beds in the lounge. In the lounge there are three double sofa beds.</p>
-          <h2>Ground Floor</h2><p>The entrance hallway has a spacious side area to store coats and shoes. There is a loo with a basin on this floor.</p>
-          <h2>First Floor</h2><p>On the first floor there is a large sitting room with triple aspect windows and a pretty non-working period fireplace. There are three comfortable sofas that convert to sofa beds plus an armchair and two occasional chairs. There is a tv with dvd and Wi-fi. Lamps and accessories make this a gorgeous room to relax after a day’s shopping!<br>The eat-in kitchen has an oak dining table with eight stools. The kitchen is contemporary with bright accessories. There is a fridge and a separate freezer, cooker, dishwasher, microwave and everything you need to self cater. However, with so many fabulous and reasonably priced restaurants and cafes just a short walk away you probably won’t ever need to cook! (Please note the property does not have a washing machine, but there is a launderette just along the road and you can leave your washing with them and they do it for you.)</p>
-          <h2>Second Floor</h2><p>On the second floor is a very spacious bedroom that has a dual aspect. There is another non-working period fireplace. This room has four full size quality single beds and two can be joined together to create a king size bed. There is a also a cube bed that can be used if required and can easily be moved around. There is a semi-ensuite fully enclosed deluxe shower cubicle in this room with a screen to the side.<br>The second bedroom on this floor is a twin room but it can be arranged as a king if you specify at the time of booking.<br>The family bathroom on this floor has a large walk-in shower and a loo and basin.</p>
-          <h2>Third Floor</h2><p>On the third floor are two more attic bedrooms. Each have three beds and a cube bed, which again, can be moved if required. All the rooms have very high ceilings apart from these two top rooms which have sloped ceilings to one side.</p>
-          <h2>Bathrooms</h2><p>There is one family bathroom which has a spacious walk in shower cubicle and a loo and basin. There is additional loo and basin on the ground floor. There is an additional shower in the master bedroom (please see photo).</p><br />
+       <dl title="The Lighthouse">
+       <dt><h2>Light, spacious Kemp Town pad</h2></dt>
+       <dd><p>This is a really bright and spacious four bedroom property. Most of the rooms have dual or triple aspect huge sash windows so the Lighthouse has been aptly named! The location is very well regarded and has a fantastic array of tea rooms, cafes, antique knick-knack shops, gastro pubs, restaurants and independent food shops and delis. The beach is just at the end of the road and The Palace Pier and town is within walking distance.<br>There are four spacious bedrooms. Bedroom 1 is huge and comfortably has four full size single beds. Bedroom 2 is smaller and has two full size single beds. Bedroom 3 and bedroom 4 each have three full size single beds. In addition there are four cube beds that can be placed anywhere on the floors in these rooms as additional beds if people didn't want to use the sofa beds in the lounge. In the lounge there are three double sofa beds.</p></dd>
+       <dt><h2>Ground Floor</h2></dt>
+       <dd><p>The entrance hallway has a spacious side area to store coats and shoes. There is a loo with a basin on this floor.</p></dd>
+       <dt><h2>First Floor</h2></dt>
+       <dd><p>On the first floor there is a large sitting room with triple aspect windows and a pretty non-working period fireplace. There are three comfortable sofas that convert to sofa beds plus an armchair and two occasional chairs. There is a tv with dvd and Wi-fi. Lamps and accessories make this a gorgeous room to relax after a day's shopping!<br>The eat-in kitchen has an oak dining table with eight stools. The kitchen is contemporary with bright accessories. There is a fridge and a separate freezer, cooker, dishwasher, microwave and everything you need to self cater. However, with so many fabulous and reasonably priced restaurants and cafes just a short walk away you probably won't ever need to cook! (Please note the property does not have a washing machine, but there is a launderette just along the road and you can leave your washing with them and they do it for you.)</p></dd>
+       <dt><h2>Second Floor</h2></dt>
+       <dd><p>On the second floor is a very spacious bedroom that has a dual aspect. There is another non-working period fireplace. This room has four full size quality single beds and two can be joined together to create a king size bed. There is a also a cube bed that can be used if required and can easily be moved around. There is a semi-ensuite fully enclosed deluxe shower cubicle in this room with a screen to the side.<br>The second bedroom on this floor is a twin room but it can be arranged as a king if you specify at the time of booking.<br>The family bathroom on this floor has a large walk-in shower and a loo and basin.</p></dd>
+       <dt><h2>Third Floor</h2></dt>
+       <dd><p>On the third floor are two more attic bedrooms. Each have three beds and a cube bed, which again, can be moved if required. All the rooms have very high ceilings apart from these two top rooms which have sloped ceilings to one side.</p></dd>
+       <dt><h2>Bathrooms</h2></dt>
+       <dd><p>There is one family bathroom which has a spacious walk in shower cubicle and a loo and basin. There is additional loo and basin on the ground floor. There is an additional shower in the master bedroom (please see photo).</p></dd></dl><br />
        </div> <hr><br><!-- end of description 3 pt -->
 
 		<!-- The bottom buttons -->
         <div class="section group">
-	    <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
+	    <div class="col span_8_of_8">
+          <p class="text-center"><a href="#cheekyplan" data-role="button"  data-icon="arrow-l" data-inline="true">Cheeky Plan This</a></p>
 	</div>
-                        
-          <div class="col span_4_of_8">
-          <p class="text-center"><a href="index.html" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">More details</a></p>
-          </div>
  </div>
        </div> <!-- closes 5 pt description box -->
    	</div> <!-- closes full 8 pt span -->
@@ -1875,7 +1980,7 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" class="ui-btn-active ui-state-persist" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" data-transition="flip" data-inline="true">Options</a></li>
       </ul>
@@ -1906,21 +2011,25 @@
 
        
         <div data-role="fieldcontain">
-            <fieldset data-role="controlgroup">
-              <legend>Colour scheme:</legend>
-                  <input type="radio" name="radio-choice-1" id="radio-choice-1c" value="choice-1" />
-                  <label for="radio-choice-1c">Default</label>
+		    <fieldset data-role="controlgroup">
+		    	<legend>Colour scheme:</legend>
+		         	<input type="radio" name="radio-col-1" id="radio-col-1" value="choice-1" onclick="changeCSS('css/aloe.css', 0);">
+		         	<label for="radio-col-1">Aloe Goodness</label>
 
-                  <input type="radio" name="radio-choice-1" id="radio-choice-2c" value="choice-2"  />
-                  <label for="radio-choice-2c">Summer</label>
+		         	<input type="radio" name="radio-col-1" id="radio-col-2" value="choice-2" onclick="changeCSS('css/melon.css', 0);">
+		         	<label for="radio-col-2">Melon Blast</label>
 
-                  <input type="radio" name="radio-choice-1" id="radio-choice-3c" value="choice-3"  />
-                  <label for="radio-choice-3c">Winter</label>
+		         	<input type="radio" name="radio-col-1" id="radio-col-3" value="choice-3" onclick="changeCSS('css/mint.css', 0);">
+		         	<label for="radio-col-3">Mint Madness</label>
 
-                  <input type="radio" name="radio-choice-1" id="radio-choice-4c" value="choice-4"  />
-                  <label for="radio-choice-4c">Candy</label>
-            </fieldset>
-        </div>
+		         	<input type="radio" name="radio-col-1" id="radio-col-4" value="choice-4" checked="checked" onclick="changeCSS('css/pink.css', 0);">
+		         	<label for="radio-col-4">Pretty in Pink</label>
+                    
+                    <input type="radio" name="radio-col-1" id="radio-col-5" value="choice-5" onclick="changeCSS('css/sand.css', 0);">
+		         	<label for="radio-col-5">Sandy Beach</label>
+		    </fieldset>
+		</div>
+       
         <hr>
 	<a href="mailto:rjo11@uni.brighton.ac.uk?subject=Feedback-for-cheeky-hen-app" data-role="button">Feedback</a>
 	<a href="http://www.i1mp.com" data-role="button">Website</a>
@@ -1932,15 +2041,13 @@
       <ul>
         <li><a href="#home" data-icon="gear" data-transition="flip" data-inline="true">Home</a></li>
         <li><a href="#activities" data-icon="refresh" data-transition="flip" data-inline="true">Activities</a></li>
-        <li><a href="#venues" data-icon="check" data-transition="flip" data-inline="true">Venues</a></li>
+         
         <li><a href="#accomodation" data-icon="check" data-transition="flip" data-inline="true">Accommodation</a></li>
         <li><a href="#options" data-icon="check" class="ui-btn-active ui-state-persist">Options</a></li>
       </ul>
     </div>
   </div>
-  
   </div>
-  
 	<script type="text/javascript" src="js/sliders/wowslider.js"></script>
 	<script type="text/javascript" src="js/sliders/script1.js"></script>
     
